@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.36107.64
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Interwencje PSP", "Interwencje PSP\Interwencje PSP.dtproj", "{291D4E27-AB0A-4934-88C5-875097F032B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{291D4E27-AB0A-4934-88C5-875097F032B7}.Development|Default.ActiveCfg = Development
+		{291D4E27-AB0A-4934-88C5-875097F032B7}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE40B143-0984-4611-8D1E-E14A984C6044}
+	EndGlobalSection
+EndGlobal

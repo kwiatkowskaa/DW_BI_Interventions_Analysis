@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/2/2025 8:44:45 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="OLALAPTOP"
+  DTS:CreatorName="OLALAPTOP\olenk"
+  DTS:DTSID="{037FC225-7A35-455A-B55C-FD4093C93F02}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionGUID="{4766F30F-65AD-47D1-8845-220CC6D6057A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables />
+</DTS:Executable>
