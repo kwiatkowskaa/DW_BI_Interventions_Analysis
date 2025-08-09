@@ -14,8 +14,8 @@ The dataset used for analysis was sourced from the official Polish government po
 ---
 
 ## Data Source and Licensing
-- **Source:** Official Polish government portal with public datasets on fire brigade interventions [https://dane.gov.pl/pl/institution/22,komenda-glowna-panstwowej-strazy-pozarnej] (https://dane.gov.pl/pl/institution/22,komenda-glowna-panstwowej-strazy-pozarnej)
-- **License:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode.pl)  
+- **Source 1:** Official Polish government portal with public datasets on fire brigade interventions [https://dane.gov.pl/pl/institution/22,komenda-glowna-panstwowej-strazy-pozarnej](https://dane.gov.pl/pl/institution/22,komenda-glowna-panstwowej-strazy-pozarnej)
+- **License:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode.pl)
 - **Note:** This repository does **not** contain the original dataset. Only the database model, ETL process, OLAP cube design, and sample visualizations are provided.  
 
 ---
