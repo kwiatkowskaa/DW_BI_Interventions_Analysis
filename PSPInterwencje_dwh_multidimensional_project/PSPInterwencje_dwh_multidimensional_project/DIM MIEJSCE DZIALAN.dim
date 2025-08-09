@@ -1,0 +1,296 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="fd4d6dfc-6105-4e5e-a74e-9c5ec9e248f8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM MIEJSCE DZIALAN</ID>
+  <Name>DIM MIEJSCE DZIALAN</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="86ad32ab-a5b5-4c64-a2cd-bd4f87ed0136">
+    <DataSourceViewID>PSP Interwencje Dwh</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="4b80cd45-062b-4d24-ad43-b83665419255">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="468a7873-b05b-4492-af46-85010e423806">
+      <ID>MIEJSCE DZIALAN KEY</ID>
+      <Name>MIEJSCE DZIALAN KEY</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="94571fdd-eb7b-4b02-93be-9831d28d69dc">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="99919064-5a21-4098-bd84-9d4217558158">
+            <TableID>dbo_DIM_MIEJSCE_DZIALAN</TableID>
+            <ColumnID>MIEJSCE_DZIALAN_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="aaf0d4d0-c1a3-4d2c-a0f6-3b7fce280482">
+          <AttributeID>WEWNATRZ POZIOM PIWNICY</AttributeID>
+          <Name>WEWNATRZ POZIOM PIWNICY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="64deb384-9f87-4d2e-af5a-24e70fd3d043">
+          <AttributeID>WEWNATRZ PARTER</AttributeID>
+          <Name>WEWNATRZ PARTER</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9f4da1c3-d127-4245-b1e3-d8c0fd9fa6a7">
+          <AttributeID>WEWNATRZ PIETRA OD1 DO3</AttributeID>
+          <Name>WEWNATRZ PIETRA OD1 DO3</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8981d956-a7d1-45d1-8968-abc7abbf201d">
+          <AttributeID>WEWNATRZ PIETRA OD4 DO7</AttributeID>
+          <Name>WEWNATRZ PIETRA OD4 DO7</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="14ca0906-c388-4ab3-adf6-3aa8071f6324">
+          <AttributeID>WEWNATRZ PIETRA POWYZEJ7</AttributeID>
+          <Name>WEWNATRZ PIETRA POWYZEJ7</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="81a0e7bb-ac86-4902-85c5-81d69adfb8e5">
+          <AttributeID>DACH PODDASZE</AttributeID>
+          <Name>DACH PODDASZE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="466c32ef-2cc5-4d19-9411-dbedc95b3d33">
+          <AttributeID>WINDA KOMIN SZYB</AttributeID>
+          <Name>WINDA KOMIN SZYB</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="058b6f78-204b-442e-9f73-779b77685c25">
+          <AttributeID>POD WODA</AttributeID>
+          <Name>POD WODA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="65ad9109-1ea4-4b73-9eff-002a64b99d94">
+          <AttributeID>POD ZIEMIA</AttributeID>
+          <Name>POD ZIEMIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f3f416ce-9cc7-4ea2-9ba6-a9d756be5072">
+          <AttributeID>WYKOPY OSUWISKA</AttributeID>
+          <Name>WYKOPY OSUWISKA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="629beff8-42fc-4956-848e-c809ab2ffefe">
+          <AttributeID>NA WYSOKOSCI</AttributeID>
+          <Name>NA WYSOKOSCI</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6dabd6ef-1059-4b6e-a17e-7f0ac82d4fcc">
+      <ID>WEWNATRZ POZIOM PIWNICY</ID>
+      <Name>WEWNATRZ POZIOM PIWNICY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bc1573d8-1c71-4ba7-a6c6-3f5144ae8b4e">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="54a69a25-557c-441e-be66-74a64daffe98">
+            <TableID>dbo_DIM_MIEJSCE_DZIALAN</TableID>
+            <ColumnID>WEWNATRZ_POZIOM_PIWNICY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5e03e7c1-51cb-450f-9f8b-78bf1da5f81c">
+      <ID>WEWNATRZ PARTER</ID>
+      <Name>WEWNATRZ PARTER</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8008bd00-a500-4841-a2ab-9236a7160205">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="262cab78-a44d-4b09-b1c6-717163b0c354">
+            <TableID>dbo_DIM_MIEJSCE_DZIALAN</TableID>
+            <ColumnID>WEWNATRZ_PARTER</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="11d1fd2c-aa17-4f14-ada2-bb58010b89d0">
+      <ID>WEWNATRZ PIETRA OD1 DO3</ID>
+      <Name>WEWNATRZ PIETRA OD1 DO3</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8dcca51b-7e15-49d8-b49c-d0a1ae36c991">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f1ba9614-739f-4d41-9189-78db62915c8f">
+            <TableID>dbo_DIM_MIEJSCE_DZIALAN</TableID>
+            <ColumnID>WEWNATRZ_PIETRA_OD1_DO3</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ac418e01-60e7-4806-ab68-c007db91170a">
+      <ID>WEWNATRZ PIETRA OD4 DO7</ID>
+      <Name>WEWNATRZ PIETRA OD4 DO7</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="de1adf0e-2e98-4388-8f5b-448584648b5a">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="02a289c7-0826-451b-b19e-649fe3ba15ce">
+            <TableID>dbo_DIM_MIEJSCE_DZIALAN</TableID>
+            <ColumnID>WEWNATRZ_PIETRA_OD4_DO7</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a7968bae-8fed-4605-ba08-5800ba4c75e3">
+      <ID>WEWNATRZ PIETRA POWYZEJ7</ID>
+      <Name>WEWNATRZ PIETRA POWYZEJ7</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4ae71e3b-fea3-4b01-bb5b-8e092f73e15a">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="34808a03-05b5-43f6-ae07-4f02bc2e9204">
+            <TableID>dbo_DIM_MIEJSCE_DZIALAN</TableID>
+            <ColumnID>WEWNATRZ_PIETRA_POWYZEJ7</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="84d0f612-4521-4bb3-bf03-4bd9dc55d2f9">
+      <ID>DACH PODDASZE</ID>
+      <Name>DACH PODDASZE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3bba2089-530a-45fe-b3e4-13d5502f5784">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a54d92e5-d3a0-4774-989c-f0899f08842a">
+            <TableID>dbo_DIM_MIEJSCE_DZIALAN</TableID>
+            <ColumnID>DACH_PODDASZE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e0dcb7ee-b1a2-417d-9a96-d115038a0efe">
+      <ID>WINDA KOMIN SZYB</ID>
+      <Name>WINDA KOMIN SZYB</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8ef02b81-241b-4149-a3b2-c733c5047f13">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1d589c6d-b95f-446f-9e0e-8ac06f0cf68f">
+            <TableID>dbo_DIM_MIEJSCE_DZIALAN</TableID>
+            <ColumnID>WINDA_KOMIN_SZYB</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="518121f7-4bbf-4dae-b253-842b06c20e93">
+      <ID>POD WODA</ID>
+      <Name>POD WODA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4ac1c34c-8727-4317-b1ef-88c1131188ef">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dcba045f-fe05-4317-8cc2-7ffd5801bdef">
+            <TableID>dbo_DIM_MIEJSCE_DZIALAN</TableID>
+            <ColumnID>POD_WODA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9a421672-61e7-45ca-8b85-9db1bad50eac">
+      <ID>POD ZIEMIA</ID>
+      <Name>POD ZIEMIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="952209f9-b3f0-4213-a874-3b00e78b0f69">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ddcdbeee-c73e-434d-bb43-d8830aade750">
+            <TableID>dbo_DIM_MIEJSCE_DZIALAN</TableID>
+            <ColumnID>POD_ZIEMIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3b9287b4-6b36-4ca1-a31b-e8d67cb67eea">
+      <ID>WYKOPY OSUWISKA</ID>
+      <Name>WYKOPY OSUWISKA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6669dd95-3e24-448e-b7d1-f15025f3600f">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f31bdbb8-8966-40f5-b804-2ef54d70ce42">
+            <TableID>dbo_DIM_MIEJSCE_DZIALAN</TableID>
+            <ColumnID>WYKOPY_OSUWISKA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2d9f5769-e8ca-4320-ac31-4fa2f1066402">
+      <ID>NA WYSOKOSCI</ID>
+      <Name>NA WYSOKOSCI</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bf65ce32-9366-42bd-9e61-bad6d0a854b1">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5d9be87a-f0ba-47fa-8c2e-c93c138ca49b">
+            <TableID>dbo_DIM_MIEJSCE_DZIALAN</TableID>
+            <ColumnID>NA_WYSOKOSCI</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

@@ -1,0 +1,607 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3bac54d8-0930-4a16-a666-83f4dadb70bf" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM RODZAJ</ID>
+  <Name>DIM RODZAJ</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="26" scrolltop="63" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="90" x="7197" y="9402" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_RODZAJ" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="7832" height="8861" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000981e00009d220000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_RODZAJ" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>26</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>63</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>90</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="300">
+            <Shape Id="RODZAJ KEY" Expanded="false">
+              <Attributes>
+                <Attribute Id="RODZAJ KEY" />
+                <Attribute Id="OPADY DESZCZU" />
+                <Attribute Id="OPADY SNIEGU" />
+                <Attribute Id="POZAR LASU DRZEWA" />
+                <Attribute Id="POZAR LASU GLEBA" />
+                <Attribute Id="POZAR LASU PODPOWIERCHNIOWY" />
+                <Attribute Id="POZAR LASU POJEDYNCZE DRZEWO" />
+                <Attribute Id="PRZYBORY WOD" />
+                <Attribute Id="SILNY WIATR" />
+                <Attribute Id="WYPADEK DROGOWY" />
+                <Attribute Id="WYPADEK KOLEJOWY" />
+                <Attribute Id="WYPADEK LOTNICZY" />
+                <Attribute Id="WYPADEK NA OBSZARZE WODNYM" />
+                <Attribute Id="ZAGROZENIE BUDOWLANE" />
+                <Attribute Id="ZAGROZENIE CHEMICZNE" />
+                <Attribute Id="ZAGROZENIE EKOLOGICZNE" />
+                <Attribute Id="ZAGROZENIE INFRASTRUKTURY KOMUNALNEJ" />
+                <Attribute Id="ZAGROZENIE MEDYCZNE" />
+                <Attribute Id="ZAGROZENIE RADIOLOGICZNE" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="WLK" Expanded="false">
+              <Attributes>
+                <Attribute Id="WLK" />
+              </Attributes>
+              <Position x="400" y="20" />
+            </Shape>
+            <Shape Id="RODZAJ NAME" Expanded="false">
+              <Attributes>
+                <Attribute Id="RODZAJ NAME" />
+              </Attributes>
+              <Position x="400" y="71" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="ff656831-7f58-49b7-9237-038e4233ea8d">
+    <DataSourceViewID>PSP Interwencje Dwh</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="5e82193d-40e1-49b6-b54f-0b55a1ae0184">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="9dc77654-c105-4ee9-bb93-635668f6d710">
+      <ID>RODZAJ KEY</ID>
+      <Name>RODZAJ KEY</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f67f3301-d240-41c5-8b86-19dd56d2c346">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d9a177e9-bd7b-45d7-9af9-48ee9b8e47d0">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>RODZAJ_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="e7d5871f-ba11-4ef5-8805-93ed3e453959">
+          <AttributeID>RODZAJ NAME</AttributeID>
+          <Name>RODZAJ NAME</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9a4ab997-56b5-4b86-a46e-3e36c9322e81">
+          <AttributeID>WLK</AttributeID>
+          <Name>WLK</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fa051012-8119-4318-b5cb-ef14f8c518f6">
+          <AttributeID>POZAR LASU PODPOWIERCHNIOWY</AttributeID>
+          <Name>POZAR LASU PODPOWIERCHNIOWY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="54ef1aee-10da-408a-8107-2c5936f18461">
+          <AttributeID>POZAR LASU GLEBA</AttributeID>
+          <Name>POZAR LASU GLEBA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bcc85dc6-ddf1-4131-95f4-bf5cba533926">
+          <AttributeID>POZAR LASU DRZEWA</AttributeID>
+          <Name>POZAR LASU DRZEWA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d18fa9ab-9b4f-4112-b8c3-afe02aca7b78">
+          <AttributeID>POZAR LASU POJEDYNCZE DRZEWO</AttributeID>
+          <Name>POZAR LASU POJEDYNCZE DRZEWO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7dfc723e-3691-48f0-a262-52bab30c810a">
+          <AttributeID>SILNY WIATR</AttributeID>
+          <Name>SILNY WIATR</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="40a5922e-c72a-41fb-9f2b-1aad45a60857">
+          <AttributeID>PRZYBORY WOD</AttributeID>
+          <Name>PRZYBORY WOD</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bb65c242-7c47-401b-be0a-4a1084491a8f">
+          <AttributeID>OPADY SNIEGU</AttributeID>
+          <Name>OPADY SNIEGU</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="32ff6a49-5153-4cea-8317-dcda22fdbdd0">
+          <AttributeID>OPADY DESZCZU</AttributeID>
+          <Name>OPADY DESZCZU</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="60fa10be-660f-4cc3-9f19-6dac18b002a0">
+          <AttributeID>ZAGROZENIE CHEMICZNE</AttributeID>
+          <Name>ZAGROZENIE CHEMICZNE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d6e25ef9-ed5a-4948-ae9d-c6c032741243">
+          <AttributeID>ZAGROZENIE EKOLOGICZNE</AttributeID>
+          <Name>ZAGROZENIE EKOLOGICZNE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f9dbe587-5124-4d89-93fa-ec55919df7ac">
+          <AttributeID>ZAGROZENIE RADIOLOGICZNE</AttributeID>
+          <Name>ZAGROZENIE RADIOLOGICZNE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cf7302a0-648e-4190-bc07-38fd271c52df">
+          <AttributeID>ZAGROZENIE BUDOWLANE</AttributeID>
+          <Name>ZAGROZENIE BUDOWLANE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9478e85a-b574-4afd-955b-84f1e23e7642">
+          <AttributeID>ZAGROZENIE INFRASTRUKTURY KOMUNALNEJ</AttributeID>
+          <Name>ZAGROZENIE INFRASTRUKTURY KOMUNALNEJ</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="dff8dfa6-c976-42dd-8763-0fc90602fc73">
+          <AttributeID>WYPADEK DROGOWY</AttributeID>
+          <Name>WYPADEK DROGOWY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a597110f-31e0-4643-96da-1d3156219cd4">
+          <AttributeID>WYPADEK KOLEJOWY</AttributeID>
+          <Name>WYPADEK KOLEJOWY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="265898e9-14c4-4986-ae94-9af2860933b8">
+          <AttributeID>WYPADEK LOTNICZY</AttributeID>
+          <Name>WYPADEK LOTNICZY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4e2fa744-36b6-447b-81fe-7c4e4ffb61d9">
+          <AttributeID>WYPADEK NA OBSZARZE WODNYM</AttributeID>
+          <Name>WYPADEK NA OBSZARZE WODNYM</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ac772498-9ad8-4950-9a49-5f4c110e9a10">
+          <AttributeID>ZAGROZENIE MEDYCZNE</AttributeID>
+          <Name>ZAGROZENIE MEDYCZNE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="dfe56f58-efb7-4d7c-9413-05eb5cc1736b">
+          <AttributeID>RODZAJ INTERWENCJI</AttributeID>
+          <Name>RODZAJ INTERWENCJI</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b05f8e8f-d91f-41e7-97ad-e7bcc528e524">
+          <AttributeID>WIELKOŚĆ INTERWENCJI</AttributeID>
+          <Name>WIELKOŚĆ INTERWENCJI</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="61aa2c7a-fd2c-4f37-a801-d2677b6cfb49">
+      <ID>RODZAJ NAME</ID>
+      <Name>RODZAJ NAME</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="72afc46c-ea37-4583-b4aa-6485257d77af">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="01fc47dc-4271-43fc-8cad-a53d19590fd4">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>RODZAJ_NAME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1f6dc01f-f1f5-4ce0-9ab1-5c45d80dcff0">
+      <ID>WLK</ID>
+      <Name>WLK</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="071e8229-cbba-4b4d-a269-218d2e1f519f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9a62f4ae-f2a5-4a11-8ff3-e6e3308c6417">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>WLK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ac876591-d4d4-4260-be38-b34da483c10a">
+      <ID>POZAR LASU PODPOWIERCHNIOWY</ID>
+      <Name>POZAR LASU PODPOWIERCHNIOWY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f6af3df7-33e4-483b-a9ce-561005808a6f">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="71970202-6964-4261-a56f-460680bd69e5">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>POZAR_LASU_PODPOWIERCHNIOWY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b2742d01-93de-4faa-b74a-a0954343c4c1">
+      <ID>POZAR LASU GLEBA</ID>
+      <Name>POZAR LASU GLEBA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a79a7fe7-8dc3-4e4d-b116-b07f3ffc3d49">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2949e99e-37da-4175-9dcf-a06e1954a7a4">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>POZAR_LASU_GLEBA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="14624b80-3b17-48c4-85ac-c573ba5e551b">
+      <ID>POZAR LASU DRZEWA</ID>
+      <Name>POZAR LASU DRZEWA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b0f6c5d4-273a-41fc-8470-a9ee27f6a397">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6e3c26ab-0128-4094-a14e-20ed4d39b800">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>POZAR_LASU_DRZEWA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7748aac5-c78a-43ed-9857-b5f8c1ae3b39">
+      <ID>POZAR LASU POJEDYNCZE DRZEWO</ID>
+      <Name>POZAR LASU POJEDYNCZE DRZEWO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="742ede94-fb2f-4394-93a1-1c0fa4d193a1">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dd468e80-1a1c-4747-932a-18b43d61002b">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>POZAR_LASU_POJEDYNCZE_DRZEWO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="01f5e26f-b8ed-4989-ad9e-abda4bba9924">
+      <ID>SILNY WIATR</ID>
+      <Name>SILNY WIATR</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c3eece18-3f95-4a59-bc62-3d5920d68f5e">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f2696ea7-ed77-42af-a33f-6beefd6cbcf3">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>SILNY_WIATR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="39f11d73-1a50-456f-b896-3c33f422075c">
+      <ID>PRZYBORY WOD</ID>
+      <Name>PRZYBORY WOD</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9a411f96-acf0-47b0-8d39-79d0f9579ea3">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2461a3f8-278a-4d1e-8421-6e8b59e64f6f">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>PRZYBORY_WOD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c860cbb2-abab-44ea-a522-15772312005a">
+      <ID>OPADY SNIEGU</ID>
+      <Name>OPADY SNIEGU</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7460bc97-42a1-4a18-b527-a6ee1b0f4a3d">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="70c0157d-fc83-4c6a-9470-30c5bc854b04">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>OPADY_SNIEGU</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d4f2fc39-6938-410c-abb7-5e3aa6272e84">
+      <ID>OPADY DESZCZU</ID>
+      <Name>OPADY DESZCZU</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c68463ea-37bc-4838-9c57-95971677fa6b">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a3882a22-4528-4b15-b679-42a07a085a82">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>OPADY_DESZCZU</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="33e8229f-3596-446d-be5d-9563f2ee8d93">
+      <ID>ZAGROZENIE CHEMICZNE</ID>
+      <Name>ZAGROZENIE CHEMICZNE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3362c4c4-0661-4a75-892e-b2227a3824e0">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="84f1363f-935a-4070-84a4-bfc0996324d5">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>ZAGROZENIE_CHEMICZNE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1650d23d-7865-43e1-beef-e54b0a36ccc5">
+      <ID>ZAGROZENIE EKOLOGICZNE</ID>
+      <Name>ZAGROZENIE EKOLOGICZNE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9d461a89-ab6d-4a5c-96f1-c93b7d6ea774">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7ebcb198-0ae5-43de-965c-93986257a7d1">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>ZAGROZENIE_EKOLOGICZNE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bced90fc-788b-42cf-bef7-e770dd40f9e9">
+      <ID>ZAGROZENIE RADIOLOGICZNE</ID>
+      <Name>ZAGROZENIE RADIOLOGICZNE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="06d9f1ac-7819-4fdd-84af-64bd195a43ca">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4c4580a8-c19c-45ed-ab6c-a2a5618e2eee">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>ZAGROZENIE_RADIOLOGICZNE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="400c3120-d6e8-4629-a70a-7d6481a7f1ba">
+      <ID>ZAGROZENIE BUDOWLANE</ID>
+      <Name>ZAGROZENIE BUDOWLANE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4d7113c0-f670-46e3-90c2-a0859df20be5">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2523b0b3-c041-4b65-8e79-bf2cbec28c38">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>ZAGROZENIE_BUDOWLANE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8006b773-dbde-4fa0-82d0-df32e7b65d72">
+      <ID>ZAGROZENIE INFRASTRUKTURY KOMUNALNEJ</ID>
+      <Name>ZAGROZENIE INFRASTRUKTURY KOMUNALNEJ</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b8e17142-5646-4dae-b55c-cfb6c4582682">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="280ac01e-f4b3-4d54-a4e1-7bf531e63d4b">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>ZAGROZENIE_INFRASTRUKTURY_KOMUNALNEJ</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2258f5b8-9ff7-492f-b5ef-93912573630d">
+      <ID>WYPADEK DROGOWY</ID>
+      <Name>WYPADEK DROGOWY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d5b8b007-eef0-451b-8eae-02ee519e5bd1">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e402f8ed-519a-486f-ba26-f18524ad796b">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>WYPADEK_DROGOWY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1a4e70fb-a69c-4abd-aae0-4c72ed33f7e6">
+      <ID>WYPADEK KOLEJOWY</ID>
+      <Name>WYPADEK KOLEJOWY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="50e6cc07-fa55-4726-8df0-a52f0b445f62">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b582cfba-e64c-4c90-87d4-1f80363dd254">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>WYPADEK_KOLEJOWY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="17f18dad-5587-4a09-9726-d69cd259dbad">
+      <ID>WYPADEK LOTNICZY</ID>
+      <Name>WYPADEK LOTNICZY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="35ba03e1-f380-49fa-ac8a-6bbcb629a9f9">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="47fb1da6-eda3-4d5b-80ac-9a3f846b6f9e">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>WYPADEK_LOTNICZY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="92403a54-d129-422d-8003-3feab2f78838">
+      <ID>WYPADEK NA OBSZARZE WODNYM</ID>
+      <Name>WYPADEK NA OBSZARZE WODNYM</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4d7c4a5f-10ce-4ab3-b0c5-d42e1b060632">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e1e2151b-b797-46ff-b121-5b2ec5fb5774">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>WYPADEK_NA_OBSZARZE_WODNYM</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0533e352-a023-4ab5-90a7-521743e471ff">
+      <ID>ZAGROZENIE MEDYCZNE</ID>
+      <Name>ZAGROZENIE MEDYCZNE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="03e5169a-958f-4aa5-8917-47e7167bf969">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9a8b64e7-41f5-44d2-bcf1-8468a1a3aa0d">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>ZAGROZENIE_MEDYCZNE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5fe4bc98-b83e-4076-a73b-8fac48d2c2a1">
+      <ID>RODZAJ INTERWENCJI</ID>
+      <Name>RODZAJ INTERWENCJI</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d1d2a07a-b3a7-4d2a-8b2a-8d45cecab1d3">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9274020b-b9a8-4877-a1e7-af1fee2f2979">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>RODZAJ_x0020_INTERWENCJI</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="acb2be24-cf75-4414-a12d-df55c529cbd4">
+      <ID>WIELKOŚĆ INTERWENCJI</ID>
+      <Name>WIELKOŚĆ INTERWENCJI</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="761b0a85-8ab5-4280-b505-8e0553583880">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="89a6b826-85f6-4762-93f5-e0478ba18554">
+            <TableID>dbo_DIM_RODZAJ</TableID>
+            <ColumnID>WIELKOŚĆ_x0020_INTERWENCJI</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="f0b75243-f159-4458-9883-cf3a5c8366be">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchia rodzaju interwencji</Name>
+      <Levels>
+        <Level dwd:design-time-name="368c070f-62bb-43a0-b379-be8907d23440">
+          <ID>RODZAJ INTERWENCJI</ID>
+          <Name>RODZAJ INTERWENCJI</Name>
+          <SourceAttributeID>RODZAJ INTERWENCJI</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="6b5cc31d-4c86-4eee-b6f6-33058215550e">
+          <ID>WIELKOŚĆ INTERWENCJI</ID>
+          <Name>WIELKOŚĆ INTERWENCJI</Name>
+          <SourceAttributeID>WIELKOŚĆ INTERWENCJI</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

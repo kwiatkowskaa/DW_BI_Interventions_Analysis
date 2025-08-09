@@ -1,0 +1,202 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="14fcb5d0-b61e-4fc7-9cd4-2e20b16a334d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>INTERWENCJE</ID>
+  <Name>INTERWENCJE</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="ec084c06-b91c-40c0-a26c-24dcce7726df">
+    <DataSourceViewID>PSP Interwencje Dwh</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="3194a700-fdbf-42dc-85e5-9ee8db2a3230">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="9bc214f4-5597-4568-ade3-da5a7d085324">
+      <ID>INTERWENCJE KEY</ID>
+      <Name>INTERWENCJE KEY</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bec809ea-eb14-42c0-872c-82425719ff04">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bb1402af-1e0d-4719-9db1-9b8bb02ce3f3">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>INTERWENCJE_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b9e1fac5-e925-4c5b-bdd2-1ea5e9f84bd5">
+          <AttributeID>OPERATION TYPE</AttributeID>
+          <Name>OPERATION TYPE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="69129502-aadf-4c39-a192-4a98752391a8">
+          <AttributeID>WOJEWODZTWO</AttributeID>
+          <Name>WOJEWODZTWO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="eaba7845-0969-43cb-b982-634ec9b2a288">
+          <AttributeID>POWIAT</AttributeID>
+          <Name>POWIAT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="614ddfb4-77c6-4681-85d8-134bcfe9f78c">
+          <AttributeID>GMINA</AttributeID>
+          <Name>GMINA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b3171b8a-b42a-4405-ab76-657074d362de">
+          <AttributeID>RODZ ZAUW</AttributeID>
+          <Name>RODZ ZAUW</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a1aede02-2579-4db4-91f6-d415b0b12b04">
+          <AttributeID>RODZ ZGL</AttributeID>
+          <Name>RODZ ZGL</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e9797ebe-dc64-4075-b089-0e49e1e37026">
+      <ID>OPERATION TYPE</ID>
+      <Name>OPERATION TYPE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4fe67700-c5ae-4722-bf62-f3dd9a8aee18">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0ef1c3de-122f-4cd0-bfde-310419b49abf">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>OPERATION_TYPE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="78d5af64-9358-42e2-963b-6e99321ec572">
+      <ID>WOJEWODZTWO</ID>
+      <Name>WOJEWODZTWO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="86b8d313-0327-4eb2-a605-69c73db3404c">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="39486812-3854-4782-b900-c77dbd678a99">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>WOJEWODZTWO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e4144dff-bd2e-4863-bd20-62b6d32c7ea2">
+      <ID>POWIAT</ID>
+      <Name>POWIAT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="26bced88-8e01-49ac-8d33-fb59c113b6bd">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f91e508c-ca6e-4ced-8bdd-7dde9bf68eb5">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>POWIAT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="77cc2bbe-4763-4265-a91d-e8f2c65df97a">
+      <ID>GMINA</ID>
+      <Name>GMINA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d73cf55b-15fa-4eb9-9aa9-4fd88f67e0e7">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="410f26a2-de84-4351-b699-3d8fb2d50a0a">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>GMINA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7927cc2e-b7d7-48ab-8c17-0d3022e358d4">
+      <ID>RODZ ZAUW</ID>
+      <Name>RODZ ZAUW</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dd493143-3726-495e-8460-092fab7d5e73">
+          <DataType>WChar</DataType>
+          <DataSize>300</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="07be543b-53e2-49dd-997b-f9fccc395d71">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>RODZ_ZAUW</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b56cf8e0-46a5-4ac3-a1c9-c95c293fb5d6">
+      <ID>RODZ ZGL</ID>
+      <Name>RODZ ZGL</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="da4a32e6-7dd6-4d7b-99e7-3d3da5d4e894">
+          <DataType>WChar</DataType>
+          <DataSize>300</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="178189d8-673c-4b41-9d06-45b80a54e71a">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>RODZ_ZGL</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

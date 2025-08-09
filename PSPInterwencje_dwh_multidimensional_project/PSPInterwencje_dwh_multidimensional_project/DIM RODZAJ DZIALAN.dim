@@ -1,0 +1,390 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="797761b3-199a-4064-96b3-886068a2bcf0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM RODZAJ DZIALAN</ID>
+  <Name>DIM RODZAJ DZIALAN</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="16" scrolltop="-5650" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="87" x="7497" y="14640" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_RODZAJ_DZIALAN" left="22" top="-2311" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="8132" height="7433" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000c41f0000091d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DIM_RODZAJ_DZIALAN" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>16</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5650</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>22</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-2311</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>87</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="300">
+            <Shape Id="RODZAJ DZIALAN KEY" Expanded="true">
+              <Attributes>
+                <Attribute Id="RODZAJ DZIALAN KEY" />
+                <Attribute Id="DZIALANIA EWAKUACYJNE" />
+                <Attribute Id="DZIALANIA GASNICZE" />
+                <Attribute Id="DZIALANIA LOGISTYCZNE" />
+                <Attribute Id="DZIALANIA PORZADKOWE" />
+                <Attribute Id="ODDYMIANIE" />
+                <Attribute Id="POSZUKIWANIE OSOB ZAGINIONYCH" />
+                <Attribute Id="PRZEMIESZCZANIE NIEBEZPIECZNYCH ZWIERZAT" />
+                <Attribute Id="RATOWNICTWO CHEMICZNE" />
+                <Attribute Id="RATOWNICTWO MEDYCZNE" />
+                <Attribute Id="RATOWNICTWO TECHNICZNE" />
+                <Attribute Id="SCHLADZANIE URZADZEN" />
+                <Attribute Id="USUWANIE SKUTKOW ZDARZENIA" />
+                <Attribute Id="ZABEZPIECZANIE MIEJSCA ZDARZENIA" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="5e786a83-1612-4cac-b06b-9b04975c4bb1">
+    <DataSourceViewID>PSP Interwencje Dwh</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="b8cd421a-4a02-4341-b354-f26d0d07e2d8">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="9b3320f6-24f0-4fcc-8e0e-827d0145ea14">
+      <ID>RODZAJ DZIALAN KEY</ID>
+      <Name>RODZAJ DZIALAN KEY</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1f683cc2-e880-4039-818a-317eb98b5daa">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="adf042de-322d-45ae-ab73-7e754809c53d">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>RODZAJ_DZIALAN_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="2196b11a-d42b-40a0-8eee-39100c01162e">
+          <AttributeID>DZIALANIA GASNICZE</AttributeID>
+          <Name>DZIALANIA GASNICZE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9cdac9c0-ce91-4df6-a2f0-e512717e9821">
+          <AttributeID>DZIALANIA EWAKUACYJNE</AttributeID>
+          <Name>DZIALANIA EWAKUACYJNE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="465feeeb-ca5e-46e0-b44b-612a416f2578">
+          <AttributeID>RATOWNICTWO MEDYCZNE</AttributeID>
+          <Name>RATOWNICTWO MEDYCZNE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f8a636f3-18b6-43b8-8829-6ea55d3ead10">
+          <AttributeID>RATOWNICTWO TECHNICZNE</AttributeID>
+          <Name>RATOWNICTWO TECHNICZNE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b6cd2a16-ff55-4baa-a53e-bd68b07a896b">
+          <AttributeID>ZABEZPIECZANIE MIEJSCA ZDARZENIA</AttributeID>
+          <Name>ZABEZPIECZANIE MIEJSCA ZDARZENIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1af853ea-1d64-469f-a5d5-de3d55657602">
+          <AttributeID>RATOWNICTWO CHEMICZNE</AttributeID>
+          <Name>RATOWNICTWO CHEMICZNE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9d1bf8de-ee97-4c3c-8b3b-fba2159d3b14">
+          <AttributeID>USUWANIE SKUTKOW ZDARZENIA</AttributeID>
+          <Name>USUWANIE SKUTKOW ZDARZENIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ed580d69-7d7d-4a43-a13b-dc44ee1b4494">
+          <AttributeID>DZIALANIA PORZADKOWE</AttributeID>
+          <Name>DZIALANIA PORZADKOWE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3e93ff11-ae54-4016-9656-eb54e93498c2">
+          <AttributeID>DZIALANIA LOGISTYCZNE</AttributeID>
+          <Name>DZIALANIA LOGISTYCZNE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5584c321-01a3-4d8e-a794-f9ec8a37b207">
+          <AttributeID>POSZUKIWANIE OSOB ZAGINIONYCH</AttributeID>
+          <Name>POSZUKIWANIE OSOB ZAGINIONYCH</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b0dd2c1a-283b-4657-94b6-13a5450c3519">
+          <AttributeID>PRZEMIESZCZANIE NIEBEZPIECZNYCH ZWIERZAT</AttributeID>
+          <Name>PRZEMIESZCZANIE NIEBEZPIECZNYCH ZWIERZAT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6f189dbe-858d-4681-b71a-636931de06d6">
+          <AttributeID>ODDYMIANIE</AttributeID>
+          <Name>ODDYMIANIE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1490e884-8c5a-4b5f-9a4f-a37a677e90a6">
+          <AttributeID>SCHLADZANIE URZADZEN</AttributeID>
+          <Name>SCHLADZANIE URZADZEN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="225d5bbc-cd8f-4c48-ba20-37bfd92c3cbe">
+      <ID>DZIALANIA GASNICZE</ID>
+      <Name>DZIALANIA GASNICZE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="31907408-dd0b-4726-9cfd-e7cac4fad2db">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="55960477-7242-4c74-bfa3-4b21af432845">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>DZIALANIA_GASNICZE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9ad1ae89-e2c7-417b-bf8b-0e307ab963a4">
+      <ID>DZIALANIA EWAKUACYJNE</ID>
+      <Name>DZIALANIA EWAKUACYJNE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6757f9b1-0427-4585-85f2-9e76546bec33">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="86ea340b-3bb1-4913-87c0-1508a9afdbbf">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>DZIALANIA_EWAKUACYJNE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="59955f17-f16b-4209-81b4-d09dbb4d09c0">
+      <ID>RATOWNICTWO MEDYCZNE</ID>
+      <Name>RATOWNICTWO MEDYCZNE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="97625a23-5daa-4bd0-976e-bf82da06faff">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fc751a25-ac4d-404c-a562-3eba9095e950">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>RATOWNICTWO_MEDYCZNE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6da7b95d-79c0-4f51-a118-f5a0f61d98fc">
+      <ID>RATOWNICTWO TECHNICZNE</ID>
+      <Name>RATOWNICTWO TECHNICZNE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6bd3cc78-4c7a-4f39-b2b1-5f47aa45b932">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="056feb4c-3af6-4ca4-80ba-7fa89ca8f7e9">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>RATOWNICTWO_TECHNICZNE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="330f77ca-2881-4e84-a05b-a2f79540f560">
+      <ID>ZABEZPIECZANIE MIEJSCA ZDARZENIA</ID>
+      <Name>ZABEZPIECZANIE MIEJSCA ZDARZENIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0ce5f900-5641-469a-996d-fcc40bb3350c">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2c6f9ded-f8f6-4ba1-a50a-dbf6fb3ee048">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>ZABEZPIECZANIE_MIEJSCA_ZDARZENIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="43cc628a-498c-484d-852b-4715b13eb8d9">
+      <ID>RATOWNICTWO CHEMICZNE</ID>
+      <Name>RATOWNICTWO CHEMICZNE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c2f96bc9-8ee8-4f4d-8be9-059de2c0a13c">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c6ff976e-be72-4dfc-8ac4-0c0c500dbfee">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>RATOWNICTWO_CHEMICZNE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e8cd41c0-206d-4f79-b36b-75e4034662b1">
+      <ID>USUWANIE SKUTKOW ZDARZENIA</ID>
+      <Name>USUWANIE SKUTKOW ZDARZENIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0a4d0e05-0cdb-49f8-8cb5-6abdcba63d47">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cc7f6cd0-08d5-437e-8869-0a015d049f1b">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>USUWANIE_SKUTKOW_ZDARZENIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7a577411-4937-428f-a35a-f18cc22a529c">
+      <ID>DZIALANIA PORZADKOWE</ID>
+      <Name>DZIALANIA PORZADKOWE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5811ddce-f3a4-4cbc-b296-12ac78a1090c">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e0e99e16-0711-4acd-9e9d-fab01fffacf7">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>DZIALANIA_PORZADKOWE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f23ddcd9-925a-4f98-8020-fceada600437">
+      <ID>DZIALANIA LOGISTYCZNE</ID>
+      <Name>DZIALANIA LOGISTYCZNE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2d7a661c-ae06-4c25-b9a9-8a7cf9444632">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="643014bd-4353-4699-84a1-845888b4eeeb">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>DZIALANIA_LOGISTYCZNE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a26c2562-4a70-4162-96ff-fae23aa3284a">
+      <ID>POSZUKIWANIE OSOB ZAGINIONYCH</ID>
+      <Name>POSZUKIWANIE OSOB ZAGINIONYCH</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7ca53046-511b-49ce-a6d3-867c9fc11b9a">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="baddb429-e953-4d4a-9e37-4f22a7923b06">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>POSZUKIWANIE_OSOB_ZAGINIONYCH</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="eb4a3659-0bd2-49d0-a1d3-5378613b3048">
+      <ID>PRZEMIESZCZANIE NIEBEZPIECZNYCH ZWIERZAT</ID>
+      <Name>PRZEMIESZCZANIE NIEBEZPIECZNYCH ZWIERZAT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bb746df4-e433-49c7-94c8-9259d41b339c">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f8bd192e-c12a-4b40-a42d-9e23c9430f78">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>PRZEMIESZCZANIE_NIEBEZPIECZNYCH_ZWIERZAT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a8f19aaa-2aa2-417b-8eb5-83a3f33669ff">
+      <ID>ODDYMIANIE</ID>
+      <Name>ODDYMIANIE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c8a7f73a-ef02-4918-aeb9-2f89da4ce56b">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9c93f6c9-5560-4afc-b980-116e2873039d">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>ODDYMIANIE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="34a41e9e-b1e3-41cc-b5d8-ca7e7f178ac4">
+      <ID>SCHLADZANIE URZADZEN</ID>
+      <Name>SCHLADZANIE URZADZEN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bb5039a6-7ebf-44e9-9ccb-6d1ca188fe84">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cacaa934-6887-4b80-8913-eb4150469c57">
+            <TableID>dbo_DIM_RODZAJ_DZIALAN</TableID>
+            <ColumnID>SCHLADZANIE_URZADZEN</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

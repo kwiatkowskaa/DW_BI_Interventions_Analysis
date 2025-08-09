@@ -1,0 +1,334 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4248ebb3-959e-4811-be66-b6675554eb8b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>FACT INTERWENCJE</ID>
+  <Name>FACT INTERWENCJE</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="7739416c-3902-413c-97d0-8fb41ef2d7a3">
+    <DataSourceViewID>PSP Interwencje Dwh</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="81136738-9edb-454a-8bc1-f40de0fde762">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="fac1247f-c50a-4b23-9ad3-38bf2775aa94">
+      <ID>INTERWENCJE KEY</ID>
+      <Name>INTERWENCJE KEY</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2afd8db3-0617-40e6-9ee8-45113444c2c1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="36fdd312-045f-41cb-80d5-cb38eb20ae83">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>INTERWENCJE_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="ccc555dc-2b78-4c79-ab9f-27b1b63c2268">
+          <AttributeID>DATA LOK KEY</AttributeID>
+          <Name>DATA LOK KEY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f35b33a9-f7d6-4dbf-9bbd-42b5a37a248b">
+          <AttributeID>KOMENDA KEY</AttributeID>
+          <Name>KOMENDA KEY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="42cd65b9-7bf2-4342-b48d-3ccfda201d3a">
+          <AttributeID>DATA DOJ KEY</AttributeID>
+          <Name>DATA DOJ KEY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1795fd07-7c1b-4417-8464-efd2523756f6">
+          <AttributeID>PRZYCZYNA KEY</AttributeID>
+          <Name>PRZYCZYNA KEY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3e3e8c6b-fff8-423e-970a-b315ec76dac6">
+          <AttributeID>DATA ZAU KEY</AttributeID>
+          <Name>DATA ZAU KEY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b3156f68-ee28-4dae-bc22-86763c5f4a4c">
+          <AttributeID>DATA POW KEY</AttributeID>
+          <Name>DATA POW KEY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="eacddd34-6ec5-4b04-82f8-236b0869a331">
+          <AttributeID>RODZAJ KEY</AttributeID>
+          <Name>RODZAJ KEY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b441969c-754e-4567-a5df-a76860c07d5e">
+          <AttributeID>DATA ZGL KEY</AttributeID>
+          <Name>DATA ZGL KEY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="586dd007-90bc-40a7-a477-08d641f00aeb">
+          <AttributeID>OBIEKT KEY</AttributeID>
+          <Name>OBIEKT KEY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fda81641-bd21-4462-9222-b8fea353968b">
+          <AttributeID>MIEJSCE DZIALAN KEY</AttributeID>
+          <Name>MIEJSCE DZIALAN KEY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7dcd8b7d-ea7f-404f-8e09-72b3a39ff870">
+          <AttributeID>RODZAJ DZIALAN KEY</AttributeID>
+          <Name>RODZAJ DZIALAN KEY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="095181ee-0684-4136-a7ef-4db72898859d">
+          <AttributeID>DATA USU KEY</AttributeID>
+          <Name>DATA USU KEY</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="599cc243-d3ae-404e-b9f2-9a43e964ce9c">
+      <ID>DATA LOK KEY</ID>
+      <Name>DATA LOK KEY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="29ce0eef-4dda-40aa-80e8-48829a1566b0">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="90bd70b4-bb66-44df-ac4e-10ac04c29c68">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>DATA_LOK_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c5a84a39-a203-43c9-a897-44ee9311008f">
+      <ID>KOMENDA KEY</ID>
+      <Name>KOMENDA KEY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e6918c25-7f0b-4740-bf1b-28941c684572">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cb33a6d4-d524-4278-8dff-c05491a7cb6d">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>KOMENDA_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8646f2a5-e0f9-4155-ae1d-ca9543f40323">
+      <ID>DATA DOJ KEY</ID>
+      <Name>DATA DOJ KEY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d12b4614-e78d-4c24-acc1-3d61f4efda96">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="36292657-3cda-46d4-952a-affb49c1b62c">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>DATA_DOJ_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e6e2709a-4106-4954-833b-e5709c2d6add">
+      <ID>PRZYCZYNA KEY</ID>
+      <Name>PRZYCZYNA KEY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="148aacf6-454d-477b-9a4b-afcbba8ac6d7">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8add6189-4816-4b62-af9f-e2738d0d255d">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>PRZYCZYNA_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e6976ebe-5514-4b58-bf81-5b1b8722eef2">
+      <ID>DATA ZAU KEY</ID>
+      <Name>DATA ZAU KEY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5a19cf7d-ccb1-4056-9097-927a8a5dd82d">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5469da67-8592-4611-a28e-87af81d8f9f2">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>DATA_ZAU_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cff40f72-bb05-4c5d-b3cc-bce0ee0c906d">
+      <ID>DATA POW KEY</ID>
+      <Name>DATA POW KEY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4a1b363f-847a-4bf6-9b93-c6014571636b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3aecc8f3-10bc-4610-aebe-be8497491105">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>DATA_POW_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="193cee37-ae55-4e6c-8afd-1067850cd380">
+      <ID>RODZAJ KEY</ID>
+      <Name>RODZAJ KEY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3208bb36-97d1-43b6-88cf-8cf4dbe3540a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9f458316-b640-4d32-9458-3d2cb1d3dc07">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>RODZAJ_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5783fe72-720e-4a57-8bcf-1efc2675afc5">
+      <ID>DATA ZGL KEY</ID>
+      <Name>DATA ZGL KEY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8b9eb4f4-c849-49f8-96ca-e2fe7b7e4d9e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="254d065d-e598-4cdc-87b7-d8036de8e6d4">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>DATA_ZGL_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8c677d05-417b-445a-8622-b51d7b293085">
+      <ID>OBIEKT KEY</ID>
+      <Name>OBIEKT KEY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4fe11996-2b0d-457e-bf4c-b0b6c4c8e7f3">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2afee024-a77c-44a4-aaa6-cc408078dd57">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>OBIEKT_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="93af93e3-8283-4a56-8141-9fcfe0e1651d">
+      <ID>MIEJSCE DZIALAN KEY</ID>
+      <Name>MIEJSCE DZIALAN KEY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="01ce8b10-5950-4d9e-a613-df6866ad2438">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="391da857-6b2f-41f0-b115-f4c24f5f2ce7">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>MIEJSCE_DZIALAN_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="69d5e343-0c0e-4d73-b237-ff62de7b1733">
+      <ID>RODZAJ DZIALAN KEY</ID>
+      <Name>RODZAJ DZIALAN KEY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="483ba039-6986-4e54-a497-fe4d2f6321b9">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="91f1e562-6d0e-4984-9537-d33fed613b25">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>RODZAJ_DZIALAN_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8b4f042f-8602-4da0-be42-46bf4e814aec">
+      <ID>DATA USU KEY</ID>
+      <Name>DATA USU KEY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="58e81186-683d-4074-bb64-0b8406d7b877">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4105688a-03e0-4e7c-ae6d-5a67d3949aac">
+            <TableID>dbo_FACT_INTERWENCJE</TableID>
+            <ColumnID>DATA_USU_KEY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

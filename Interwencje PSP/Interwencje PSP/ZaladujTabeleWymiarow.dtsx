@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="ZaladujTabeleWymiarow"
   DTS:PackageType="5"
-  DTS:VersionBuild="250"
-  DTS:VersionGUID="{295423F1-5A6E-4D89-A27C-B43050ED810A}">
+  DTS:VersionBuild="253"
+  DTS:VersionGUID="{1644CA38-DBC8-49DD-9126-F3EE6A38E529}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -18494,6 +18494,18 @@
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E93D44FD-6584-4B13-A69C-DCF14AFD1022}"
+      DTS:ObjectName="localhost.PSPInterwencje_dwh">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=PSPInterwencje_dwh;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ZaladujTabeleWymiarow-{E93D44FD-6584-4B13-A69C-DCF14AFD1022}localhost.PSPInterwencje_dwh;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -57996,8 +58008,8 @@ where [refTable].[GMINA] = ? and [refTable].[WOJEWODZTWO] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Lookup.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -61971,8 +61983,8 @@ where [refTable].[WOJEWODZTWO] = ? and [refTable].[POWIAT] = ? and [refTable].[G
                   <connections>
                     <connection
                       refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Wybierz nowe wiersze.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -62222,11 +62234,11 @@ where [refTable].[WOJEWODZTWO] = ? and [refTable].[POWIAT] = ? and [refTable].[G
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja"
+                  refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
                   description="OLE DB Destination"
-                  name="Zaladuj do DimLokalizacja"
+                  name="Zaladuj do DimKomenda"
                   usesDispositions="true"
                   version="4">
                   <properties>
@@ -62279,102 +62291,102 @@ where [refTable].[WOJEWODZTWO] = ? and [refTable].[POWIAT] = ? and [refTable].[G
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje]"
+                      refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input]"
+                      refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].Columns[Woj_nowe]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].Columns[Woj_nowe]"
                           cachedDataType="wstr"
                           cachedLength="100"
                           cachedName="Woj_nowe"
                           cachedSortKeyPosition="1"
-                          externalMetadataColumnId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].ExternalColumns[WOJEWODZTWO]"
+                          externalMetadataColumnId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].ExternalColumns[WOJEWODZTWO]"
                           lineageId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Sortowanie unikalnych.Outputs[Sort Output].Columns[Woj_nowe]" />
                         <inputColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].Columns[miasto_powiatowe]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].Columns[miasto_powiatowe]"
                           cachedDataType="wstr"
                           cachedLength="100"
                           cachedName="miasto_powiatowe"
                           cachedSortKeyPosition="2"
-                          externalMetadataColumnId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].ExternalColumns[POWIAT]"
+                          externalMetadataColumnId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].ExternalColumns[POWIAT]"
                           lineageId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Sortowanie unikalnych.Outputs[Sort Output].Columns[miasto_powiatowe]" />
                         <inputColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].Columns[gmina_nowa]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].Columns[gmina_nowa]"
                           cachedDataType="wstr"
                           cachedLength="100"
                           cachedName="gmina_nowa"
                           cachedSortKeyPosition="3"
-                          externalMetadataColumnId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].ExternalColumns[GMINA]"
+                          externalMetadataColumnId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].ExternalColumns[GMINA]"
                           lineageId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Sortowanie unikalnych.Outputs[Sort Output].Columns[gmina_nowa]" />
                         <inputColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].Columns[kod_clean]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].Columns[kod_clean]"
                           cachedDataType="wstr"
                           cachedLength="10"
                           cachedName="kod_clean"
                           cachedSortKeyPosition="4"
-                          externalMetadataColumnId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].ExternalColumns[KOD_POCZTOWY]"
+                          externalMetadataColumnId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].ExternalColumns[KOD_POCZTOWY]"
                           lineageId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Sortowanie unikalnych.Outputs[Sort Output].Columns[kod_clean]" />
                         <inputColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].Columns[nazwa_komendy_woj_clean]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].Columns[nazwa_komendy_woj_clean]"
                           cachedDataType="wstr"
                           cachedLength="400"
                           cachedName="nazwa_komendy_woj_clean"
                           cachedSortKeyPosition="5"
-                          externalMetadataColumnId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].ExternalColumns[NAZWA_KOMENDY_WOJEWODZKIEJ]"
+                          externalMetadataColumnId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].ExternalColumns[NAZWA_KOMENDY_WOJEWODZKIEJ]"
                           lineageId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Sortowanie unikalnych.Outputs[Sort Output].Columns[nazwa_komendy_woj_clean]" />
                         <inputColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].Columns[nazwa_komendy_pw_clean]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].Columns[nazwa_komendy_pw_clean]"
                           cachedDataType="wstr"
                           cachedLength="400"
                           cachedName="nazwa_komendy_pw_clean"
                           cachedSortKeyPosition="6"
-                          externalMetadataColumnId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].ExternalColumns[NAZWA_KOMENDY_POWIATOWEJ]"
+                          externalMetadataColumnId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].ExternalColumns[NAZWA_KOMENDY_POWIATOWEJ]"
                           lineageId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Sortowanie unikalnych.Outputs[Sort Output].Columns[nazwa_komendy_pw_clean]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].ExternalColumns[KOMENDA_KEY]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].ExternalColumns[KOMENDA_KEY]"
                           dataType="i4"
                           name="KOMENDA_KEY" />
                         <externalMetadataColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].ExternalColumns[WOJEWODZTWO]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].ExternalColumns[WOJEWODZTWO]"
                           dataType="wstr"
                           length="100"
                           name="WOJEWODZTWO" />
                         <externalMetadataColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].ExternalColumns[POWIAT]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].ExternalColumns[POWIAT]"
                           dataType="wstr"
                           length="100"
                           name="POWIAT" />
                         <externalMetadataColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].ExternalColumns[GMINA]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].ExternalColumns[GMINA]"
                           dataType="wstr"
                           length="100"
                           name="GMINA" />
                         <externalMetadataColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].ExternalColumns[KOD_POCZTOWY]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].ExternalColumns[KOD_POCZTOWY]"
                           dataType="wstr"
                           length="10"
                           name="KOD_POCZTOWY" />
                         <externalMetadataColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].ExternalColumns[NAZWA_KOMENDY_WOJEWODZKIEJ]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].ExternalColumns[NAZWA_KOMENDY_WOJEWODZKIEJ]"
                           dataType="wstr"
                           length="400"
                           name="NAZWA_KOMENDY_WOJEWODZKIEJ" />
                         <externalMetadataColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input].ExternalColumns[NAZWA_KOMENDY_POWIATOWEJ]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input].ExternalColumns[NAZWA_KOMENDY_POWIATOWEJ]"
                           dataType="wstr"
                           length="400"
                           name="NAZWA_KOMENDY_POWIATOWEJ" />
@@ -62383,22 +62395,22 @@ where [refTable].[WOJEWODZTWO] = ? and [refTable].[POWIAT] = ? and [refTable].[G
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Outputs[OLE DB Destination Error Output]"
+                      refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Outputs[OLE DB Destination Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input]">
+                      synchronousInputId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -62485,7 +62497,7 @@ where [refTable].[WOJEWODZTWO] = ? and [refTable].[POWIAT] = ? and [refTable].[G
                   startId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Sortowanie 3.Outputs[Sort Output]" />
                 <path
                   refId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Sort Output4]"
-                  endId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja.Inputs[OLE DB Destination Input]"
+                  endId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda.Inputs[OLE DB Destination Input]"
                   name="Sort Output"
                   startId="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Sortowanie unikalnych.Outputs[Sort Output]" />
               </paths>
@@ -65954,8 +65966,8 @@ where [refTable].[WEWNATRZ_POZIOM_PIWNICY] = ? and [refTable].[WEWNATRZ_PARTER] 
                   <connections>
                     <connection
                       refId="Package\Petla do poprawionych plikow dimMiejsceDzialan\Zaladuj dimMiejsceDzialan\Wybranie Nowych Wierszy.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -66400,8 +66412,8 @@ where [refTable].[WEWNATRZ_POZIOM_PIWNICY] = ? and [refTable].[WEWNATRZ_PARTER] 
                   <connections>
                     <connection
                       refId="Package\Petla do poprawionych plikow dimMiejsceDzialan\Zaladuj dimMiejsceDzialan\ZaladujDimMiejsceDzialan.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -70400,8 +70412,8 @@ where [refTable].[WOLNOSTAJACY] = ? and [refTable].[KOMPLEKS_BUDYNKOW] = ? and [
                   <connections>
                     <connection
                       refId="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty\Wybierz Nowe Wiersze.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -70897,8 +70909,8 @@ where [refTable].[WOLNOSTAJACY] = ? and [refTable].[KOMPLEKS_BUDYNKOW] = ? and [
                   <connections>
                     <connection
                       refId="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty\Zaladuj Do Tabeli DimObiekty.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -73385,8 +73397,8 @@ where [refTable].[przyczyna_key] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Petla do poprawionych plikow dimPrzyczyny\Zaladuj dimPrzyczyny\Zaladuj Tylko Nowe Przyczyny.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -73531,8 +73543,8 @@ where [refTable].[przyczyna_key] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Petla do poprawionych plikow dimPrzyczyny\Zaladuj dimPrzyczyny\Załaduj Do tabeli DimPrzyczny.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -77433,8 +77445,8 @@ where [refTable].[POZAR_LASU_PODPOWIERCHNIOWY] = ? and [refTable].[POZAR_LASU_GL
                   <connections>
                     <connection
                       refId="Package\Petla do poprawionych plikow dimRodzaj\Zaladuj dimRodzaj\Wybierz Nowe Wiersze.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje 1]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje 1]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -78119,8 +78131,8 @@ where [refTable].[POZAR_LASU_PODPOWIERCHNIOWY] = ? and [refTable].[POZAR_LASU_GL
                   <connections>
                     <connection
                       refId="Package\Petla do poprawionych plikow dimRodzaj\Zaladuj dimRodzaj\Zaladuj Tabela DimRodzaj.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -84036,8 +84048,8 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
                   <connections>
                     <connection
                       refId="Package\Petla do poprawionych plikow dimRodzajDzialan\Zaladuj dimRodzajDzialan\Wybierz Nowe Wiersze.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -84542,8 +84554,8 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
                   <connections>
                     <connection
                       refId="Package\Petla do poprawionych plikow dimRodzajDzialan\Zaladuj dimRodzajDzialan\Zaladuj DimRodzajDzialan.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -84775,6 +84787,56 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{D9510688-4D39-47CC-908F-2D7688C45008}"
+      DTS:From="Package\Petla do poprawionych plikow dimPrzyczyny"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Petla do poprawionych plikow dimRodzajDzialan" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{1199B7E3-684C-4F1F-BC0A-F75F775B569F}"
+      DTS:From="Package\Petla do poprawionych plikow dimRodzajDzialan"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Petla do poprawionych plikow dimMiejsceDzialan" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{8B9536B0-D694-48C4-9252-0A8DFBFD6DB9}"
+      DTS:From="Package\Petla do poprawionych plikow dimMiejsceDzialan"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Petla do poprawionych plikow dimRodzaj" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{E2E16EC2-3623-4ECF-8A33-A52394DC576E}"
+      DTS:From="Package\Petla do poprawionych plikow dimRodzaj"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Petla do poprawionych plikow dimObiekty" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{0BEAF908-7DEA-4FFA-B65D-2F2B000C34AF}"
+      DTS:From="Package\Petla do poprawionych plikow dimObiekty"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Petla do poprawionych plikow dimKomenda" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{24A6E585-DCBB-43EA-A421-00854C1F71DF}"
+      DTS:From="Package\Petla do poprawionych plikow dimKomenda"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Petla dla FACT_INTERWENCJE" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -84786,7 +84848,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="193.333333333334,42.6666666666667"
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje"
@@ -84805,8 +84867,8 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="298.666666666667,140"
-          Size="298.666666666667,182.666666666667"
+          PanelSize="306,132"
+          Size="306,174.666666666667"
           Id="Package\Petla do poprawionych plikow dimKomenda"
           TopLeft="640.001995134012,315.692346331771" />
         <NodeLayout
@@ -84864,6 +84926,186 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
           Size="249.333333333334,181.333333333334"
           Id="Package\Petla do poprawionych plikow dimRodzajDzialan"
           TopLeft="95.937499459928,312.430066633334" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="219.882439934455,272.535948954102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.8941176792324"
+              Start="0,0"
+              End="0,32.3941176792324">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.3941176792324" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="220.604166126595,493.763399966667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="271.179563013614,-3.10055806085728"
+              Start="0,0"
+              End="271.179563013614,4.39944193914272">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
+                  <mssgle:LineSegment
+                    End="267.179563013614,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="267.179563013614,22.5"
+                    Point2="271.179563013614,22.5"
+                    Point3="271.179563013614,18.5" />
+                  <mssgle:LineSegment
+                    End="271.179563013614,4.39944193914272" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="491.222223576462,314.66284190581">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-40.7613466844427"
+              Start="0,0"
+              End="0,-33.2613466844427">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-33.2613466844427" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="531.660718012715,273.901495221367">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="255.714290067553,-3.92436995580545"
+              Start="0,0"
+              End="255.714290067553,3.57563004419455">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
+                  <mssgle:LineSegment
+                    End="251.714290067553,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="251.714290067553,22.5"
+                    Point2="255.714290067553,22.5"
+                    Point3="255.714290067553,18.5" />
+                  <mssgle:LineSegment
+                    End="255.714290067553,3.57563004419455" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="835.375008080268,269.977125265562">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-42.373012946256,45.7152210662091"
+              Start="0,0"
+              End="-42.373012946256,38.2152210662091">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.4335568815359" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.4335568815359"
+                    Point2="0,18.4335568815359"
+                    Point3="-4,18.4335568815359" />
+                  <mssgle:LineSegment
+                    End="-38.373012946256,18.4335568815359" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-38.373012946256,18.4335568815359"
+                    Point2="-42.373012946256,18.4335568815359"
+                    Point3="-42.373012946256,22.4335568815359" />
+                  <mssgle:LineSegment
+                    End="-42.373012946256,38.2152210662091" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="946.001995134012,403.025679665104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="83.700372234368,-128.359016252852"
+              Start="0,0"
+              End="76.200372234368,-128.359016252852">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="37.850186117184,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37.850186117184,0"
+                    Point2="41.850186117184,0"
+                    Point3="41.850186117184,-4" />
+                  <mssgle:LineSegment
+                    End="41.850186117184,-124.359016252852" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.850186117184,-124.359016252852"
+                    Point2="41.850186117184,-128.359016252852"
+                    Point3="45.850186117184,-128.359016252852" />
+                  <mssgle:LineSegment
+                    End="76.200372234368,-128.359016252852" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -84873,29 +85115,21 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="181.333333333334,42.6666666666667"
-          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Flat File Destination 2"
-          TopLeft="84.821427946112,609.714276548795" />
+          Size="254.666666666667,42.6666666666667"
+          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Transformacja kol DimMiejsceDzialan"
+          TopLeft="731.052479525722,453.22207993762" />
         <NodeLayout
           Size="122.666666666667,42.6666666666667"
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup 9"
           TopLeft="1074.35184082085,635.540732568546" />
         <NodeLayout
-          Size="113.333333333334,42.6666666666667"
-          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup"
-          TopLeft="313.27380935085,288.674603163534" />
-        <NodeLayout
-          Size="122.666666666667,42.6666666666667"
-          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup 2"
-          TopLeft="332.234844175365,609.575753123832" />
-        <NodeLayout
-          Size="252,42.6666666666667"
-          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Transformacja kol DimRodzajDzialan"
-          TopLeft="738.541657643844,607.769694385889" />
-        <NodeLayout
           Size="140,42.6666666666667"
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Kolumny Lok"
           TopLeft="1253.54165572363,482.633327072461" />
+        <NodeLayout
+          Size="113.333333333334,42.6666666666667"
+          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup"
+          TopLeft="313.27380935085,288.674603163534" />
         <NodeLayout
           Size="230.666666666667,42.6666666666667"
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Transformacja kol DimKomenda"
@@ -84905,21 +85139,29 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup 5"
           TopLeft="1063.39284129707,290.299996512021" />
         <NodeLayout
+          Size="122.666666666667,42.6666666666667"
+          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup 2"
+          TopLeft="332.234844175365,609.575753123832" />
+        <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Przygotowanie miar"
           TopLeft="289.871794747619,83.8910259703409" />
+        <NodeLayout
+          Size="217.333333333334,42.6666666666667"
+          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Transformacja kol DimRodzaj"
+          TopLeft="263.333333072563,381.719661366323" />
         <NodeLayout
           Size="122.666666666667,42.6666666666667"
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup 8"
           TopLeft="1074.35184082085,575.740733637854" />
         <NodeLayout
-          Size="216,42.6666666666667"
-          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Przekieruj Wiersze Z Błędami"
-          TopLeft="615.535722972103,88.3872561761235" />
-        <NodeLayout
           Size="181.333333333334,42.6666666666667"
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Flat File Destination 3"
           TopLeft="589.285706143294,540.59523054035" />
+        <NodeLayout
+          Size="216,42.6666666666667"
+          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Przekieruj Wiersze Z Błędami"
+          TopLeft="615.535722972103,88.3872561761235" />
         <NodeLayout
           Size="221.333333333334,42.6666666666667"
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Transformacja kol DimObiekty"
@@ -84929,13 +85171,17 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\OLE DB Destination 1"
           TopLeft="1518.09943055673,530.326238741656" />
         <NodeLayout
+          Size="232,42.6666666666667"
+          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Transformacja kol DimPrzyczyny"
+          TopLeft="253.869047499306,219.7857136935" />
+        <NodeLayout
           Size="129.333333333334,42.6666666666667"
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup 11"
           TopLeft="1257.17591238036,566.225919522996" />
         <NodeLayout
-          Size="217.333333333334,42.6666666666667"
-          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Transformacja kol DimRodzaj"
-          TopLeft="263.333333072563,381.719661366323" />
+          Size="252,42.6666666666667"
+          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Transformacja kol DimRodzajDzialan"
+          TopLeft="738.541657643844,607.769694385889" />
         <NodeLayout
           Size="122.666666666667,42.6666666666667"
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup 7"
@@ -84945,10 +85191,6 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Flat File Destination 1"
           TopLeft="76.7857137801392,461.14285063403" />
         <NodeLayout
-          Size="254.666666666667,42.6666666666667"
-          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Transformacja kol DimMiejsceDzialan"
-          TopLeft="731.052479525722,453.22207993762" />
-        <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Flat File Destination"
           TopLeft="1305.31248796266,327.44582984743" />
@@ -84957,9 +85199,9 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup 1"
           TopLeft="316.96428099115,458.404753707846" />
         <NodeLayout
-          Size="232,42.6666666666667"
-          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Transformacja kol DimPrzyczyny"
-          TopLeft="253.869047499306,219.7857136935" />
+          Size="181.333333333334,42.6666666666667"
+          Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Flat File Destination 2"
+          TopLeft="84.821427946112,609.714276548795" />
         <NodeLayout
           Size="181.333333333334,42.6666666666667"
           Id="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Flat File Destination 4"
@@ -85786,7 +86028,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup 2">
+    design-time-name="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup 5">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -85796,7 +86038,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DIM_OBIEKTY]</Value>
+          type="q3:string">[dbo].[DIM_KOMENDA]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -85809,7 +86051,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup 5">
+    design-time-name="Package\Petla dla FACT_INTERWENCJE\Zaladuj FactInterwencje\Lookup 2">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -85819,7 +86061,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DIM_KOMENDA]</Value>
+          type="q3:string">[dbo].[DIM_OBIEKTY]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -86036,98 +86278,96 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
         <NodeLayout
           Size="140,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Merge Join 1"
-          TopLeft="195,295.714285714286" />
+          TopLeft="719.99999217689,380.214284203308" />
         <NodeLayout
           Size="140,41.3333333333334"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Sortowanie 1"
-          TopLeft="580.757142857143,208.7" />
+          TopLeft="1105.75713503403,293.199998489022" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Sortowanie unikalnych"
-          TopLeft="476.260676724025,704.77695553577" />
+          TopLeft="1001.26066890092,789.276954024792" />
         <NodeLayout
           Size="173.333333333334,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Powiaty Nazwy Map"
-          TopLeft="77.8571428571429,123.095238095238" />
+          TopLeft="602.857135034033,207.59523658426" />
         <NodeLayout
           Size="184.666666666667,41.3333333333334"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Transformacja Kolumn"
-          TopLeft="286.928571428571,123.528571428571" />
+          TopLeft="811.928563605461,208.028569917593" />
         <NodeLayout
           Size="164.666666666667,41.3333333333334"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Wiersze Z Bledami"
-          TopLeft="9.07142857142864,28.5285714285713" />
+          TopLeft="461.154755168195,143.361902708525" />
         <NodeLayout
           Size="193.333333333334,41.3333333333334"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Transformacja Kolumn 1"
-          TopLeft="553.957142857143,107.1" />
+          TopLeft="1078.95713503403,191.599998489022" />
         <NodeLayout
-          Size="201.333333333334,42.6666666666667"
-          Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja"
-          TopLeft="468.105921848531,776.007120510935" />
+          Size="194.666666666667,42.6666666666667"
+          Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda"
+          TopLeft="993.105914025421,860.507118999957" />
         <NodeLayout
           Size="141.333333333334,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Sortowanie 2"
-          TopLeft="103.571428571429,207.857142857143" />
+          TopLeft="628.57142074832,292.357141346165" />
         <NodeLayout
           Size="113.333333333334,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Lookup"
-          TopLeft="509.038461538462,625.470085470086" />
+          TopLeft="1034.03845371535,709.970083959108" />
         <NodeLayout
           Size="141.333333333334,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Sortowanie 3"
-          TopLeft="319.285714285714,207.857142857143" />
+          TopLeft="844.285706462604,292.357141346165" />
         <NodeLayout
           Size="234.666666666667,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Odczytaj Z Pliku Z Interwencjami"
-          TopLeft="245.957142857143,5.49999999999995" />
+          TopLeft="770.957135034033,89.9999984890222" />
         <NodeLayout
           Size="131.333333333334,41.3333333333334"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Sortowanie"
-          TopLeft="350.871428571429,353.7" />
+          TopLeft="875.871420748319,438.199998489022" />
         <NodeLayout
           Size="184,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Wybierz nowe wiersze"
-          TopLeft="471.780297400035,474.621207524881" />
+          TopLeft="996.780289576926,559.121206013903" />
         <NodeLayout
           Size="131.333333333334,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Merge Join"
-          TopLeft="491.928571428571,404.071428571429" />
+          TopLeft="1016.92856360546,488.571427060451" />
         <NodeLayout
           Size="221.333333333334,41.3333333333334"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Odczytaj Z Pliku Z Komendami"
-          TopLeft="539.957142857143,5.49999999999995" />
+          TopLeft="1064.95713503403,89.9999984890222" />
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Derived Column"
-          TopLeft="490.769230769231,548.461538461538" />
+          TopLeft="1015.76922294612,632.96153695056" />
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Sort Output4]"
-          TopLeft="568.849965952945,747.443622202437">
+          TopLeft="1092.18329146317,831.943620691459">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,28.563498308498"
+              EndConnector="0,28.5634983084984"
               Start="0,0"
-              End="0,21.063498308498">
+              End="0,21.0634983084984">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.063498308498" />
+                    End="0,21.0634983084984" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Sort Output3]"
-          TopLeft="389.952380952381,250.52380952381">
+          TopLeft="914.952373129271,335.023808012832">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -86156,14 +86396,12 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Sort Output2]"
-          TopLeft="174.238095238095,250.52380952381">
+          TopLeft="699.238087414985,335.023808012832">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -86192,14 +86430,12 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Sort Output1]"
-          TopLeft="482.204761904762,374.366666666667">
+          TopLeft="1007.20475408165,458.866665155689">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -86222,20 +86458,18 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Sort Output]"
-          TopLeft="650.757142857143,250.033333333333">
+          TopLeft="1175.75713503403,334.533331822355">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-72.6063492063498,154.038095238096"
+              EndConnector="-72.6063492063499,154.038095238096"
               Start="0,0"
-              End="-72.6063492063498,146.538095238096">
+              End="-72.6063492063499,146.538095238096">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -86246,26 +86480,24 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
                     Point2="0,91.3104456225823"
                     Point3="-4,91.3104456225823" />
                   <mssgle:LineSegment
-                    End="-68.6063492063498,91.3104456225823" />
+                    End="-68.6063492063499,91.3104456225823" />
                   <mssgle:CubicBezierSegment
-                    Point1="-68.6063492063498,91.3104456225823"
-                    Point2="-72.6063492063498,91.3104456225823"
-                    Point3="-72.6063492063498,95.3104456225823" />
+                    Point1="-68.6063492063499,91.3104456225823"
+                    Point2="-72.6063492063499,91.3104456225823"
+                    Point3="-72.6063492063499,95.3104456225823" />
                   <mssgle:LineSegment
-                    End="-72.6063492063498,146.538095238096" />
+                    End="-72.6063492063499,146.538095238096" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Merge Join Output1]"
-          TopLeft="560.687767747636,446.738095238096">
+          TopLeft="1085.68775992453,531.238093727118">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -86282,14 +86514,12 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Merge Join Output]"
-          TopLeft="335,317.047619047619">
+          TopLeft="859.99999217689,401.547617536641">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -86312,14 +86542,12 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Lookup No Match Output1]"
-          TopLeft="565.9414307513,517.287874191548">
+          TopLeft="1090.94142292819,601.78787268057">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -86343,7 +86571,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Lookup No Match Output]"
-          TopLeft="567.31623579791,668.136752136752">
+          TopLeft="1092.3162279748,752.636750625774">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -86367,7 +86595,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Flat File Source Output2]"
-          TopLeft="164.52380952381,165.761904761905">
+          TopLeft="689.5238017007,250.261903250927">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -86396,14 +86624,12 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Flat File Source Output1]"
-          TopLeft="650.757142857143,47.1">
+          TopLeft="1175.75713503403,131.599998489022">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -86420,20 +86646,18 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Flat File Source Output]"
-          TopLeft="363.290476190476,48.1666666666666">
+          TopLeft="888.290468367366,132.666665155689">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="15.971428571428,75.3619047619044"
+              EndConnector="15.9714285714281,75.3619047619044"
               Start="0,0"
-              End="15.971428571428,67.8619047619044">
+              End="15.9714285714281,67.8619047619044">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -86444,62 +86668,60 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
                     Point2="0,37.6809523809522"
                     Point3="4,37.6809523809522" />
                   <mssgle:LineSegment
-                    End="11.971428571428,37.6809523809522" />
+                    End="11.9714285714281,37.6809523809522" />
                   <mssgle:CubicBezierSegment
-                    Point1="11.971428571428,37.6809523809522"
-                    Point2="15.971428571428,37.6809523809522"
-                    Point3="15.971428571428,41.6809523809522" />
+                    Point1="11.9714285714281,37.6809523809522"
+                    Point2="15.9714285714281,37.6809523809522"
+                    Point3="15.9714285714281,41.6809523809522" />
                   <mssgle:LineSegment
-                    End="15.971428571428,67.8619047619044" />
+                    End="15.9714285714281,67.8619047619044" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Flat File Source Error Output]"
-          TopLeft="245.957142857143,26.8333333333333">
+          TopLeft="770.957135034033,111.333331822356">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-72.2190476190477,22.3619047619047"
+              EndConnector="-145.135713199171,52.6952375528357"
               Start="0,0"
-              End="-64.7190476190477,22.3619047619047">
+              End="-137.635713199171,52.6952375528357">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-32.1095238095239,0" />
+                    End="-68.5678565995856,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-32.1095238095239,0"
-                    Point2="-36.1095238095239,0"
-                    Point3="-36.1095238095239,4" />
+                    Point1="-68.5678565995856,0"
+                    Point2="-72.5678565995856,0"
+                    Point3="-72.5678565995856,4" />
                   <mssgle:LineSegment
-                    End="-36.1095238095239,18.3619047619047" />
+                    End="-72.5678565995856,48.6952375528357" />
                   <mssgle:CubicBezierSegment
-                    Point1="-36.1095238095239,18.3619047619047"
-                    Point2="-36.1095238095239,22.3619047619047"
-                    Point3="-40.1095238095239,22.3619047619047" />
+                    Point1="-72.5678565995856,48.6952375528357"
+                    Point2="-72.5678565995856,52.6952375528357"
+                    Point3="-76.5678565995856,52.6952375528357" />
                   <mssgle:LineSegment
-                    End="-64.7190476190477,22.3619047619047" />
+                    End="-137.635713199171,52.6952375528357" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-99.7359105282738,-17.609375,127.2527734375,11.609375"
+              BoundingBox="-136.194243318336,-17.609375,127.2527734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Derived Column Output2]"
-          TopLeft="566.903846153846,591.128205128205">
+          TopLeft="1091.90383833074,675.628203617227">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -86516,20 +86738,18 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Derived Column Output1]"
-          TopLeft="379.261904761905,164.861904761905">
+          TopLeft="904.261896938795,249.361903250927">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.6904761904763,42.9952380952381"
+              EndConnector="10.6904761904764,42.9952380952381"
               Start="0,0"
-              End="10.6904761904763,35.4952380952381">
+              End="10.6904761904764,35.4952380952381">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -86540,26 +86760,24 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
                     Point2="0,21.4976190476191"
                     Point3="4,21.4976190476191" />
                   <mssgle:LineSegment
-                    End="6.69047619047626,21.4976190476191" />
+                    End="6.69047619047637,21.4976190476191" />
                   <mssgle:CubicBezierSegment
-                    Point1="6.69047619047626,21.4976190476191"
-                    Point2="10.6904761904763,21.4976190476191"
-                    Point3="10.6904761904763,25.4976190476191" />
+                    Point1="6.69047619047637,21.4976190476191"
+                    Point2="10.6904761904764,21.4976190476191"
+                    Point3="10.6904761904764,25.4976190476191" />
                   <mssgle:LineSegment
-                    End="10.6904761904763,35.4952380952381" />
+                    End="10.6904761904764,35.4952380952381" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda.Paths[Derived Column Output]"
-          TopLeft="650.757142857143,148.7">
+          TopLeft="1175.75713503403,233.199998489022">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -86576,16 +86794,14 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimLokalizacja">
+    design-time-name="Package\Petla do poprawionych plikow dimKomenda\Zaladuj dimKomenda\Zaladuj do DimKomenda">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -86603,7 +86819,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -86613,7 +86829,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -86626,7 +86842,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -86636,7 +86852,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -86703,9 +86919,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -86775,9 +86989,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -86847,14 +87059,48 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Petla do poprawionych plikow dimMiejsceDzialan\Zaladuj dimMiejsceDzialan\Wybranie Nowych Wierszy">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Petla do poprawionych plikow dimMiejsceDzialan\Zaladuj dimMiejsceDzialan\ZaladujDimMiejsceDzialan">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty">
     <LayoutInfo>
@@ -86863,19 +87109,19 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
         <NodeLayout
           Size="186.666666666667,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty\Wybierz Nowe Wiersze"
-          TopLeft="546,254.4" />
+          TopLeft="484,231.4" />
         <NodeLayout
           Size="184.666666666667,41.3333333333334"
           Id="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty\Sortowanie Unikalnych"
-          TopLeft="591,349" />
+          TopLeft="484,331" />
         <NodeLayout
-          Size="218.666666666667,41.3333333333334"
+          Size="220,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty\Zaladuj Do Tabeli DimObiekty"
-          TopLeft="567,433" />
+          TopLeft="561,425" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty\Transformacja Kolumn"
-          TopLeft="549,158.4" />
+          TopLeft="482,141.4" />
         <NodeLayout
           Size="229.333333333334,41.3333333333334"
           Id="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty\Odczytaj z pliku z interwencjami"
@@ -86883,161 +87129,155 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
         <NodeLayout
           Size="200,41.3333333333334"
           Id="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty\Przekieruj Bledne Wiersze"
-          TopLeft="806,109" />
+          TopLeft="785,136" />
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty.Paths[Sort Output]"
-          TopLeft="679.8,390.6">
+          TopLeft="576.333333333333,372.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.4"
+              EndConnector="94.6666666666666,52.6666666666667"
               Start="0,0"
-              End="0,34.9">
+              End="94.6666666666666,45.1666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.9" />
+                    End="0,22.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.3333333333333"
+                    Point2="0,26.3333333333333"
+                    Point3="4,26.3333333333333" />
+                  <mssgle:LineSegment
+                    End="90.6666666666666,26.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="90.6666666666666,26.3333333333333"
+                    Point2="94.6666666666666,26.3333333333333"
+                    Point3="94.6666666666666,30.3333333333333" />
+                  <mssgle:LineSegment
+                    End="94.6666666666666,45.1666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty.Paths[Lookup No Match Output]"
-          TopLeft="639.333333333333,297.066666666667">
+          TopLeft="576.833333333333,274.066666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="44,51.9333333333333"
+              EndConnector="0,56.9333333333333"
               Start="0,0"
-              End="44,44.4333333333333">
+              End="0,49.4333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.9666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.9666666666667"
-                    Point2="0,25.9666666666667"
-                    Point3="4,25.9666666666667" />
-                  <mssgle:LineSegment
-                    End="40,25.9666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="40,25.9666666666667"
-                    Point2="44,25.9666666666667"
-                    Point3="44,29.9666666666667" />
-                  <mssgle:LineSegment
-                    End="44,44.4333333333333" />
+                    End="0,49.4333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-33.80638671875,30.9666666666667,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,18.9119791666667,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty.Paths[Flat File Source Output]"
-          TopLeft="593.666666666667,89.3333333333333">
+          TopLeft="556.777777777778,89.3333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="48,69.0666666666667"
+              EndConnector="17.8888888888889,52.0666666666667"
               Start="0,0"
-              End="48,61.5666666666667">
+              End="17.8888888888889,44.5666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.5333333333333" />
+                    End="0,17.0431100846805" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,30.5333333333333"
-                    Point2="0,34.5333333333333"
-                    Point3="4,34.5333333333333" />
+                    Point1="0,17.0431100846805"
+                    Point2="0,21.0431100846805"
+                    Point3="4,21.0431100846805" />
                   <mssgle:LineSegment
-                    End="44,34.5333333333333" />
+                    End="13.8888888888889,21.0431100846805" />
                   <mssgle:CubicBezierSegment
-                    Point1="44,34.5333333333333"
-                    Point2="48,34.5333333333333"
-                    Point3="48,38.5333333333333" />
+                    Point1="13.8888888888889,21.0431100846805"
+                    Point2="17.8888888888889,21.0431100846805"
+                    Point3="17.8888888888889,25.0431100846805" />
                   <mssgle:LineSegment
-                    End="48,61.5666666666667" />
+                    End="17.8888888888889,44.5666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty.Paths[Flat File Source Error Output]"
-          TopLeft="708.6,68.8">
+          TopLeft="630.555555555555,89.3333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="97.4000000000002,61"
+              EndConnector="254.444444444444,46.6666666666667"
               Start="0,0"
-              End="89.9000000000002,61">
+              End="254.444444444444,39.1666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="44.7000000000001,0" />
+                    End="0,14.860662047729" />
                   <mssgle:CubicBezierSegment
-                    Point1="44.7000000000001,0"
-                    Point2="48.7000000000001,0"
-                    Point3="48.7000000000001,4" />
+                    Point1="0,14.860662047729"
+                    Point2="0,18.860662047729"
+                    Point3="4,18.860662047729" />
                   <mssgle:LineSegment
-                    End="48.7000000000001,57" />
+                    End="250.444444444444,18.860662047729" />
                   <mssgle:CubicBezierSegment
-                    Point1="48.7000000000001,57"
-                    Point2="48.7000000000001,61"
-                    Point3="52.7000000000001,61" />
+                    Point1="250.444444444444,18.860662047729"
+                    Point2="254.444444444444,18.860662047729"
+                    Point3="254.444444444444,22.860662047729" />
                   <mssgle:LineSegment
-                    End="89.9000000000002,61" />
+                    End="254.444444444444,39.1666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-14.9263867187499,-17.609375,127.2527734375,11.609375"
+              BoundingBox="63.5958355034722,23.860662047729,127.2527734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimObiekty\Zaladuj dimObiekty.Paths[Derived Column Output]"
-          TopLeft="640.5,201.066666666667">
+          TopLeft="576,184.066666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,53.3333333333333"
+              EndConnector="0,47.3333333333333"
               Start="0,0"
-              End="0,45.8333333333333">
+              End="0,39.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.8333333333333" />
+                    End="0,39.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -87049,7 +87289,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -87059,7 +87299,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -87087,81 +87327,67 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
         <NodeLayout
           Size="214,40"
           Id="Package\Petla do poprawionych plikow dimPrzyczyny\Zaladuj dimPrzyczyny\Przekieruj Wiersze Z Błędami"
-          TopLeft="559.285723810293,89.4705894900853" />
+          TopLeft="626.285723810293,105.470589490085" />
         <NodeLayout
           Size="206.666666666667,42.6666666666667"
           Id="Package\Petla do poprawionych plikow dimPrzyczyny\Zaladuj dimPrzyczyny\Tworzenie Nowych Kolumn"
-          TopLeft="304.28571946767,107.823530923949" />
+          TopLeft="327.28571946767,105.823530923949" />
         <NodeLayout
           Size="220,40"
           Id="Package\Petla do poprawionych plikow dimPrzyczyny\Zaladuj dimPrzyczyny\Załaduj Do tabeli DimPrzyczny"
-          TopLeft="279.285719041922,290.588239369508" />
+          TopLeft="330.285719041922,289.588239369508" />
         <NodeLayout
           Size="220,40"
           Id="Package\Petla do poprawionych plikow dimPrzyczyny\Zaladuj dimPrzyczyny\Zaladuj Tylko Nowe Przyczyny"
-          TopLeft="285.714290579971,193.470590948646" />
+          TopLeft="322.714290579971,193.470590948646" />
         <NodeLayout
           Size="230,40"
           Id="Package\Petla do poprawionych plikow dimPrzyczyny\Zaladuj dimPrzyczyny\Odczytaj Z Pliku Z Interwencjami"
           TopLeft="345.000005875315,15.294117861553" />
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimPrzyczyny\Zaladuj dimPrzyczyny.Paths[Lookup No Match Output]"
-          TopLeft="392.900004810946,235.070590948646">
+          TopLeft="436.500004810947,233.470590948646">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,55.517648420862"
+              EndConnector="0,56.117648420862"
               Start="0,0"
-              End="0,48.017648420862">
+              End="0,48.617648420862">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.017648420862" />
+                    End="0,48.617648420862" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,18.204136710431,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,18.504136710431,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimPrzyczyny\Zaladuj dimPrzyczyny.Paths[Flat File Source Output]"
-          TopLeft="423.000005875315,55.294117861553">
+          TopLeft="426.809529338159,55.294117861553">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-15.3809530743117,52.529413062396"
+              EndConnector="0,50.529413062396"
               Start="0,0"
-              End="-15.3809530743117,45.029413062396">
+              End="0,43.029413062396">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.2295037246989" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.2295037246989"
-                    Point2="0,21.2295037246989"
-                    Point3="-4,21.2295037246989" />
-                  <mssgle:LineSegment
-                    End="-11.3809530743117,21.2295037246989" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-11.3809530743117,21.2295037246989"
-                    Point2="-15.3809530743117,21.2295037246989"
-                    Point3="-15.3809530743117,25.2295037246989" />
-                  <mssgle:LineSegment
-                    End="-15.3809530743117,45.029413062396" />
+                    End="0,43.029413062396" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -87170,70 +87396,56 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="169.285717934978,34.1764716285323"
+              EndConnector="236.285717934978,50.1764716285323"
               Start="0,0"
-              End="169.285717934978,26.6764716285323">
+              End="236.285717934978,42.6764716285323">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.81225278251565" />
+                    End="0,16.278574026039" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9.81225278251565"
-                    Point2="0,13.8122527825156"
-                    Point3="4,13.8122527825156" />
+                    Point1="0,16.278574026039"
+                    Point2="0,20.278574026039"
+                    Point3="4,20.278574026039" />
                   <mssgle:LineSegment
-                    End="165.285717934978,13.8122527825156" />
+                    End="232.285717934978,20.278574026039" />
                   <mssgle:CubicBezierSegment
-                    Point1="165.285717934978,13.8122527825156"
-                    Point2="169.285717934978,13.8122527825156"
-                    Point3="169.285717934978,17.8122527825157" />
+                    Point1="232.285717934978,20.278574026039"
+                    Point2="236.285717934978,20.278574026039"
+                    Point3="236.285717934978,24.278574026039" />
                   <mssgle:LineSegment
-                    End="169.285717934978,26.6764716285323" />
+                    End="236.285717934978,42.6764716285323" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="21.1014722487391,18.8122527825157,127.2527734375,11.609375"
+              BoundingBox="54.516472248739,25.278574026039,127.2527734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimPrzyczyny\Zaladuj dimPrzyczyny.Paths[Derived Column Output]"
-          TopLeft="407.619052801003,150.490197590616">
+          TopLeft="431.666671690487,148.490197590616">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-11.9047622210323,42.9803933580303"
+              EndConnector="0,44.9803933580304"
               Start="0,0"
-              End="-11.9047622210323,35.4803933580303">
+              End="0,37.4803933580304">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.4901966790152" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.4901966790152"
-                    Point2="0,21.4901966790152"
-                    Point3="-4,21.4901966790152" />
-                  <mssgle:LineSegment
-                    End="-7.90476222103229,21.4901966790152" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-7.90476222103229,21.4901966790152"
-                    Point2="-11.9047622210323,21.4901966790152"
-                    Point3="-11.9047622210323,25.4901966790152" />
-                  <mssgle:LineSegment
-                    End="-11.9047622210323,35.4803933580303" />
+                    End="0,37.4803933580304" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -87245,7 +87457,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -87255,7 +87467,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -87335,9 +87547,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -87395,9 +87605,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -87467,9 +87675,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -87494,7 +87700,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -87504,7 +87710,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -87539,7 +87745,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
         <NodeLayout
           Size="184.666666666667,41.3333333333334"
           Id="Package\Petla do poprawionych plikow dimRodzajDzialan\Zaladuj dimRodzajDzialan\Sortowanie Unikalnych"
-          TopLeft="496.028579031205,285.070590584006" />
+          TopLeft="453.028579031205,286.070590584006" />
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimRodzajDzialan\Zaladuj dimRodzajDzialan.Paths[Derived Column Output]"
           TopLeft="546.22857817971,173.905883961648">
@@ -87559,80 +87765,64 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimRodzajDzialan\Zaladuj dimRodzajDzialan.Paths[Sort Output]"
-          TopLeft="588.428579031205,326.670590584006">
+          TopLeft="545.361912364538,327.403923917339">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-32.7142864076461,40.788236999347"
+              EndConnector="10.285713592354,40.0549036660137"
               Start="0,0"
-              End="-32.7142864076461,33.288236999347">
+              End="10.285713592354,32.5549036660137">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.3941184996735" />
+                    End="0,16.0274518330068" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.3941184996735"
-                    Point2="0,20.3941184996735"
-                    Point3="-4,20.3941184996735" />
+                    Point1="0,16.0274518330068"
+                    Point2="0,20.0274518330068"
+                    Point3="4,20.0274518330068" />
                   <mssgle:LineSegment
-                    End="-28.7142864076461,20.3941184996735" />
+                    End="6.285713592354,20.0274518330068" />
                   <mssgle:CubicBezierSegment
-                    Point1="-28.7142864076461,20.3941184996735"
-                    Point2="-32.7142864076461,20.3941184996735"
-                    Point3="-32.7142864076461,24.3941184996735" />
+                    Point1="6.285713592354,20.0274518330068"
+                    Point2="10.285713592354,20.0274518330068"
+                    Point3="10.285713592354,24.0274518330068" />
                   <mssgle:LineSegment
-                    End="-32.7142864076461,33.288236999347" />
+                    End="10.285713592354,32.5549036660137" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Petla do poprawionych plikow dimRodzajDzialan\Zaladuj dimRodzajDzialan.Paths[Lookup No Match Output]"
-          TopLeft="544.542863991309,242.729414338637">
+          TopLeft="544.885721511257,242.46274767197">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="43.8857150398961,42.341176245369"
+              EndConnector="0,43.6078429120357"
               Start="0,0"
-              End="43.8857150398961,34.841176245369">
+              End="0,36.1078429120357">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.1705881226845" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.1705881226845"
-                    Point2="0,21.1705881226845"
-                    Point3="4,21.1705881226845" />
-                  <mssgle:LineSegment
-                    End="39.8857150398961,21.1705881226845" />
-                  <mssgle:CubicBezierSegment
-                    Point1="39.8857150398961,21.1705881226845"
-                    Point2="43.8857150398961,21.1705881226845"
-                    Point3="43.8857150398961,25.1705881226845" />
-                  <mssgle:LineSegment
-                    End="43.8857150398961,34.841176245369" />
+                    End="0,36.1078429120357" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-33.8635291988019,26.1705881226845,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,12.2492339560178,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -87667,9 +87857,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -87730,7 +87918,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -87740,7 +87928,7 @@ where [refTable].[DZIALANIA_GASNICZE] = ? and [refTable].[DZIALANIA_EWAKUACYJNE]
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

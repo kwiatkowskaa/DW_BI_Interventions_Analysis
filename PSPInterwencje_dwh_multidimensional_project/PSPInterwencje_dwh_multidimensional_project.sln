@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35731.53
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "PSPInterwencje_dwh_multidimensional_project", "PSPInterwencje_dwh_multidimensional_project\PSPInterwencje_dwh_multidimensional_project.dwproj", "{AA5E3AD0-8C13-4D85-A9E7-2756FB585F0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA5E3AD0-8C13-4D85-A9E7-2756FB585F0C}.Development|Default.ActiveCfg = Development
+		{AA5E3AD0-8C13-4D85-A9E7-2756FB585F0C}.Development|Default.Build.0 = Development
+		{AA5E3AD0-8C13-4D85-A9E7-2756FB585F0C}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00026E83-4AA4-4A46-A13F-1A1D9ACF1C23}
+	EndGlobalSection
+EndGlobal

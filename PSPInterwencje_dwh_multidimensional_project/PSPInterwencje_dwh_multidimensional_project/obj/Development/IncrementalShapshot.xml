@@ -1,0 +1,124 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>PSPInterwencje_dwh</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>ZclxluA+7J78jgxLUae51PIE/WM=8.06.2025 13:37:498.06.2025 13:37:49</TimeStamp>
+        <ID>
+          <String>PSP Interwencje Dwh</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>AxT6vXFPQom05jpoNH63z9PL1Yo=9.06.2025 11:31:558.06.2025 13:38:31</TimeStamp>
+        <ID>
+          <String>PSP Interwencje Dwh</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>PMSWD1QlZ2wVfGk/vUGOaBvIr4Y=8.06.2025 15:19:568.06.2025 15:16:18</TimeStamp>
+        <ID>
+          <String>DIM CZAS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>e3dh5mx3s1b+vuIODoajLKv+jDg=8.06.2025 15:27:258.06.2025 15:27:09</TimeStamp>
+        <ID>
+          <String>DIM KOMENDA</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>c3t4sa0i/djcsrNpUdnPWUev8w4=8.06.2025 15:29:118.06.2025 15:29:11</TimeStamp>
+        <ID>
+          <String>DIM MIEJSCE DZIALAN</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>7J8XgMSdz5giUGzPalWQ4kJGOwo=8.06.2025 15:30:008.06.2025 15:30:00</TimeStamp>
+        <ID>
+          <String>DIM OBIEKTY</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>+u0pm/2G0WOdCb1zj9u51dj6PT8=8.06.2025 15:30:498.06.2025 15:30:49</TimeStamp>
+        <ID>
+          <String>DIM PRZYCZYNY</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>IVuPM1Aw8F6v1VUNF8hXAKYVa3k=9.06.2025 11:31:098.06.2025 15:31:31</TimeStamp>
+        <ID>
+          <String>DIM RODZAJ</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>KAN0LaB16BeN+IatJohTHfMuERI=8.06.2025 16:13:578.06.2025 15:34:07</TimeStamp>
+        <ID>
+          <String>DIM RODZAJ DZIALAN</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>TgdVxNnnPag4PQVPsL2KAhtAtvI=8.06.2025 15:40:118.06.2025 15:40:10</TimeStamp>
+        <ID>
+          <String>FACT INTERWENCJE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>AAcG3DwsJJglynfwhTfhTX5GwFU=9.06.2025 12:46:549.06.2025 12:46:54</TimeStamp>
+        <ID>
+          <String>INTERWENCJE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>vOpI+zxARVrO2RF0HvFkf4IQsEI=9.06.2025 17:48:119.06.2025 14:12:20</TimeStamp>
+        <ID>
+          <String>DIM WOJEWODZTWA STAT</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>dj7KMLewEq48lge2h/CkRo0bQX0=10.06.2025 14:11:488.06.2025 16:16:58XExiR/d1L8K6G/Zzg8OfIojOm3E=9.06.2025 17:49:448.06.2025 16:16:58</TimeStamp>
+        <ID>
+          <String>PSP Interwencje Dwh</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>JHdysOa0JPTFxSckIDyNoqfDHCc=8.06.2025 13:26:578.06.2025 13:26:56</TimeStamp>
+      <ID>
+        <String>PSPInterwencje_dwh</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2025-06-10T12:12:14.163333Z</LastDeployed>
+</DeploymentSnapshot>

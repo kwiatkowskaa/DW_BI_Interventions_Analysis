@@ -11,11 +11,23 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{D16E3B81-900D-4B99-9A23-1AFE5AB68C4D}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{135A19F9-311A-481B-9863-49BCA7555AA4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0024486F-0F5B-48A4-9B05-B2D16554F87F}"
+      DTS:ObjectName="localhost.PSPInterwencje_dwh">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=PSPInterwencje_dwh;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{0024486F-0F5B-48A4-9B05-B2D16554F87F}localhost.PSPInterwencje_dwh;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[localhost.PSPInterwncje]"
       DTS:CreationName="OLEDB"
@@ -1076,8 +1088,8 @@
               <connections>
                 <connection
                   refId="Package\Zladuj WOJEWODZTWA_STAT\Zaladuj DIM_WOJEWODZTWA_STAT.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwncje]"
-                  connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwncje]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.PSPInterwencje_dwh]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1251,39 +1263,43 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="130.666666666667,42.6666666666667"
-          Id="Package\Zladuj WOJEWODZTWA_STAT\Plik pozary"
-          TopLeft="102.499998472631,61.0999989074469" />
+          Size="253.333333333334,42.6666666666667"
+          Id="Package\Zladuj WOJEWODZTWA_STAT\Zaladuj DIM_WOJEWODZTWA_STAT"
+          TopLeft="238.124996451661,389.516659820775" />
+        <NodeLayout
+          Size="194.666666666667,42.6666666666667"
+          Id="Package\Zladuj WOJEWODZTWA_STAT\Union dane statystyczne"
+          TopLeft="269.374995986,304.849994548857" />
+        <NodeLayout
+          Size="225.333333333334,42.6666666666667"
+          Id="Package\Zladuj WOJEWODZTWA_STAT\Kolumna - RODZAJ_DANYCH 1"
+          TopLeft="433.749993536621,187.84999664098" />
+        <NodeLayout
+          Size="160,42.6666666666667"
+          Id="Package\Zladuj WOJEWODZTWA_STAT\Plik powierzchnia"
+          TopLeft="443.74999338761,63.0499988725782" />
         <NodeLayout
           Size="216,42.6666666666667"
           Id="Package\Zladuj WOJEWODZTWA_STAT\Kolumna - RODZAJ_DANYCH"
           TopLeft="103.124998463318,191.099996582866" />
+        <NodeLayout
+          Size="130.666666666667,42.6666666666667"
+          Id="Package\Zladuj WOJEWODZTWA_STAT\Plik pozary"
+          TopLeft="102.499998472631,61.0999989074469" />
         <EdgeLayout
-          Id="Package\Zladuj WOJEWODZTWA_STAT.Paths[Flat File Source Output]"
-          TopLeft="167.833331805964,103.766665574114">
+          Id="Package\Zladuj WOJEWODZTWA_STAT.Paths[Union All Output 1]"
+          TopLeft="365.74999621883,347.516661215524">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="43.2916666573535,87.3333310087521"
+              EndConnector="0,41.9999986052516"
               Start="0,0"
-              End="43.2916666573535,79.8333310087521">
+              End="0,34.4999986052516">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.6666655043761" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39.6666655043761"
-                    Point2="0,43.6666655043761"
-                    Point3="4,43.6666655043761" />
-                  <mssgle:LineSegment
-                    End="39.2916666573535,43.6666655043761" />
-                  <mssgle:CubicBezierSegment
-                    Point1="39.2916666573535,43.6666655043761"
-                    Point2="43.2916666573535,43.6666655043761"
-                    Point3="43.2916666573535,47.6666655043761" />
-                  <mssgle:LineSegment
-                    End="43.2916666573535,79.8333310087521" />
+                    End="0,34.4999986052516" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1292,14 +1308,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="160,42.6666666666667"
-          Id="Package\Zladuj WOJEWODZTWA_STAT\Plik powierzchnia"
-          TopLeft="443.74999338761,63.0499988725782" />
-        <NodeLayout
-          Size="225.333333333334,42.6666666666667"
-          Id="Package\Zladuj WOJEWODZTWA_STAT\Kolumna - RODZAJ_DANYCH 1"
-          TopLeft="433.749993536621,187.84999664098" />
         <EdgeLayout
           Id="Package\Zladuj WOJEWODZTWA_STAT.Paths[Flat File Source Output1]"
           TopLeft="523.74999338761,105.716665539245">
@@ -1334,36 +1342,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="194.666666666667,42.6666666666667"
-          Id="Package\Zladuj WOJEWODZTWA_STAT\Union dane statystyczne"
-          TopLeft="269.374995986,304.849994548857" />
         <EdgeLayout
-          Id="Package\Zladuj WOJEWODZTWA_STAT.Paths[Derived Column Output]"
-          TopLeft="211.124998463318,233.766663249532">
+          Id="Package\Zladuj WOJEWODZTWA_STAT.Paths[Flat File Source Output]"
+          TopLeft="167.833331805964,103.766665574114">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="155.583330856015,71.0833312993247"
+              EndConnector="43.2916666573535,87.3333310087521"
               Start="0,0"
-              End="155.583330856015,63.5833312993247">
+              End="43.2916666573535,79.8333310087521">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5416656496624" />
+                    End="0,39.6666655043761" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.5416656496624"
-                    Point2="0,35.5416656496624"
-                    Point3="4,35.5416656496624" />
+                    Point1="0,39.6666655043761"
+                    Point2="0,43.6666655043761"
+                    Point3="4,43.6666655043761" />
                   <mssgle:LineSegment
-                    End="151.583330856015,35.5416656496624" />
+                    End="39.2916666573535,43.6666655043761" />
                   <mssgle:CubicBezierSegment
-                    Point1="151.583330856015,35.5416656496624"
-                    Point2="155.583330856015,35.5416656496624"
-                    Point3="155.583330856015,39.5416656496624" />
+                    Point1="39.2916666573535,43.6666655043761"
+                    Point2="43.2916666573535,43.6666655043761"
+                    Point3="43.2916666573535,47.6666655043761" />
                   <mssgle:LineSegment
-                    End="155.583330856015,63.5833312993247" />
+                    End="43.2916666573535,79.8333310087521" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1406,24 +1410,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="253.333333333334,42.6666666666667"
-          Id="Package\Zladuj WOJEWODZTWA_STAT\Zaladuj DIM_WOJEWODZTWA_STAT"
-          TopLeft="238.124996451661,389.516659820775" />
         <EdgeLayout
-          Id="Package\Zladuj WOJEWODZTWA_STAT.Paths[Union All Output 1]"
-          TopLeft="365.74999621883,347.516661215524">
+          Id="Package\Zladuj WOJEWODZTWA_STAT.Paths[Derived Column Output]"
+          TopLeft="211.124998463318,233.766663249532">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41.9999986052516"
+              EndConnector="155.583330856015,71.0833312993247"
               Start="0,0"
-              End="0,34.4999986052516">
+              End="155.583330856015,63.5833312993247">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.4999986052516" />
+                    End="0,31.5416656496624" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5416656496624"
+                    Point2="0,35.5416656496624"
+                    Point3="4,35.5416656496624" />
+                  <mssgle:LineSegment
+                    End="151.583330856015,35.5416656496624" />
+                  <mssgle:CubicBezierSegment
+                    Point1="151.583330856015,35.5416656496624"
+                    Point2="155.583330856015,35.5416656496624"
+                    Point3="155.583330856015,39.5416656496624" />
+                  <mssgle:LineSegment
+                    End="155.583330856015,63.5833312993247" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
