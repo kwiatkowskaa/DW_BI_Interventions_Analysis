@@ -34,5 +34,4 @@ Below are example BI reports generated from the designed model and OLAP cube. Th
 ![Example Report 1](/images/report1.png)
 ![Example Report 2](/images/report2.png)
 ![Example Report 3](/images/report3.png)
-![Example Report 3](/images/report4.png)
-![Example Report 3](/images/report5.png)
+![Example Report 4](/images/report4.png)
